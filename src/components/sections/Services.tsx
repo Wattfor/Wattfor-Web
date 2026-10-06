@@ -54,10 +54,10 @@ export default function Services({ onCtaClick }: ServicesProps) {
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 space-y-20 sm:space-y-28 lg:space-y-36">
         {/* Section Header */}
         <div className="max-w-2xl text-left space-y-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             // SERVICE SPECS
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             Engineered to convert clicks into phone calls.
           </h2>
         </div>
@@ -80,15 +80,15 @@ export default function Services({ onCtaClick }: ServicesProps) {
                 >
                   {/* Step ID Card */}
                   <div className="flex items-center gap-3 flex-wrap">
-                    <span className="font-mono text-xs text-brand-copper font-bold border border-brand-copper/30 px-3 py-1 bg-brand-copper/5 rounded-full select-none">
+                    <span className="text-xs text-brand-copper font-bold border border-brand-copper/30 px-3 py-1 bg-brand-copper/5 rounded-full select-none">
                       {panel.id}
                     </span>
-                    <span className="font-mono text-[10px] text-brand-slate uppercase tracking-widest font-bold">
+                    <span className="text-[10px] text-brand-slate uppercase tracking-widest font-bold">
                       {panel.eyebrow}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-4xl sm:text-5xl uppercase font-black text-brand-navy leading-none">
+                  <h3 className="text-4xl sm:text-5xl uppercase font-black text-brand-navy leading-none">
                     {panel.headline}
                   </h3>
 

@@ -5,7 +5,7 @@ import { Star, Shield, Phone, Cpu, Settings, Code } from "lucide-react";
 
 export default function BuildMock() {
   return (
-    <div className="w-full bg-[#152238] border border-white/10 rounded-2xl overflow-hidden font-mono shadow-2xl relative select-none">
+    <div className="w-full bg-[#152238] border border-white/10 rounded-2xl overflow-hidden shadow-2xl relative select-none">
       {/* Code Editor Header */}
       <div className="bg-black/35 px-4 py-3 flex items-center justify-between border-b border-white/5">
         <div className="flex space-x-1.5">
@@ -67,7 +67,7 @@ export default function BuildMock() {
         {/* Right Column: Visual Layout Render Mock */}
         <div className="md:col-span-6 bg-black/40 border border-white/5 rounded-xl p-4 flex flex-col justify-between space-y-4">
           <div className="flex justify-between items-center pb-2 border-b border-white/5">
-            <span className="text-[9px] text-white/40 font-mono">LIVE PREVIEW</span>
+            <span className="text-[9px] text-white/40 ">LIVE PREVIEW</span>
             <span className="text-[8px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-bold uppercase">
               Secure SSL
             </span>
@@ -80,10 +80,10 @@ export default function BuildMock() {
               ))}
               <span className="text-[8px] text-white/50">(48 Reviews)</span>
             </div>
-            <h4 className="font-display text-lg font-black uppercase tracking-wider text-white leading-none">
+            <h4 className="text-lg font-black uppercase tracking-wider text-white leading-none">
               Apex Electrical
             </h4>
-            <p className="text-[9px] text-white/60 leading-relaxed font-sans">
+            <p className="text-[9px] text-white/60 leading-relaxed ">
               24/7 emergency panel upgrades & residential troubleshooting.
             </p>
           </div>

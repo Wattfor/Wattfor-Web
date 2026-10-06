@@ -120,10 +120,10 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
               {step < 3 && (
                 <div className="flex justify-between items-center mb-8 border-b border-brand-navy/5 pb-4">
                   <div>
-                    <span className="font-mono text-xs text-brand-copper uppercase tracking-widest">
+                    <span className="text-xs text-brand-copper uppercase tracking-widest">
                       Step {step} of 2
                     </span>
-                    <h3 className="font-display text-4xl uppercase tracking-wider font-bold text-brand-navy mt-1">
+                    <h3 className="text-4xl uppercase tracking-wider font-bold text-brand-navy mt-1">
                       {step === 1 ? "Let's connect" : "How can we reach you?"}
                     </h3>
                   </div>
@@ -151,7 +151,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                   className="space-y-6"
                 >
                   <div className="space-y-2">
-                    <label className="block font-mono text-[10px] uppercase tracking-wider text-brand-slate font-bold">
+                    <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
                       // Company Name
                     </label>
                     <input
@@ -160,13 +160,13 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                       value={formData.businessName}
                       onChange={handleInputChange}
                       placeholder="e.g. Apex Electrical Services"
-                      className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl font-sans text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
+                      className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
                       required
                     />
                   </div>
 
                   <div className="space-y-3">
-                    <label className="block font-mono text-[10px] uppercase tracking-wider text-brand-slate font-bold">
+                    <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
                       // Your Trade Specialty
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -187,7 +187,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                             <div className={`p-2 rounded-xl ${trade.color}`}>
                               <Icon className="w-4 h-4" />
                             </div>
-                            <span className="font-sans text-sm font-semibold">{trade.name}</span>
+                            <span className="text-sm font-semibold">{trade.name}</span>
                           </button>
                         );
                       })}
@@ -218,7 +218,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="block font-mono text-[10px] uppercase tracking-wider text-brand-slate font-bold">
+                        <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
                           // Owner / Contact Name
                         </label>
                         <input
@@ -227,12 +227,12 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                           value={formData.ownerName}
                           onChange={handleInputChange}
                           placeholder="e.g. John Doe"
-                          className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl font-sans text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
+                          className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
                           required
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="block font-mono text-[10px] uppercase tracking-wider text-brand-slate font-bold">
+                        <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
                           // Phone Number
                         </label>
                         <input
@@ -241,14 +241,14 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                           value={formData.phone}
                           onChange={handleInputChange}
                           placeholder="e.g. (555) 123-4567"
-                          className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl font-sans text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
+                          className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
                           required
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block font-mono text-[10px] uppercase tracking-wider text-brand-slate font-bold">
+                      <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
                         // Email Address
                       </label>
                       <input
@@ -257,7 +257,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="e.g. john@apexelectrical.com"
-                        className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl font-sans text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
+                        className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
                         required
                       />
                     </div>
@@ -273,7 +273,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                       <button
                         type="button"
                         onClick={prevStep}
-                        className="flex items-center space-x-1 font-mono text-xs uppercase tracking-wider text-brand-slate hover:text-brand-navy cursor-pointer"
+                        className="flex items-center space-x-1 text-xs uppercase tracking-wider text-brand-slate hover:text-brand-navy cursor-pointer"
                       >
                         <ChevronLeft className="w-4 h-4" />
                         <span>Back</span>
@@ -313,10 +313,10 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <span className="font-mono text-xs text-brand-copper uppercase tracking-widest block font-bold">
+                    <span className="text-xs text-brand-copper uppercase tracking-widest block font-bold">
                       Connection Established
                     </span>
-                    <h3 className="font-display text-5xl uppercase tracking-wider font-bold text-brand-navy">
+                    <h3 className="text-5xl uppercase tracking-wider font-bold text-brand-navy">
                       Request Received.
                     </h3>
                     <p className="text-brand-slate text-sm max-w-sm mx-auto leading-relaxed">
@@ -325,7 +325,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                   </div>
 
                   {/* Faux technical read-out */}
-                  <div className="bg-brand-navy text-brand-offwhite text-left font-mono text-xs p-5 rounded-2xl space-y-1 max-w-md mx-auto border border-white/5 opacity-90 select-none shadow-md">
+                  <div className="bg-brand-navy text-brand-offwhite text-left text-xs p-5 rounded-2xl space-y-1 max-w-md mx-auto border border-white/5 opacity-90 select-none shadow-md">
                     <p className="text-brand-copper font-bold">⚡ TERMINAL STATUS: OK</p>
                     <p className="text-white/40">// DISPATCH INITIATED FOR: {formData.tradeType}</p>
                     <p className="text-emerald-400">&gt; routing pipeline... complete</p>

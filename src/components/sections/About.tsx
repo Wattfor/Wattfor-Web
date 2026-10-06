@@ -29,17 +29,17 @@ export default function About() {
           
           {/* Text Left */}
           <div className="lg:col-span-5 space-y-6">
-            <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
               // TEAM CREDENTIALS
             </span>
-            <h2 className="font-display text-5xl sm:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+            <h2 className="text-5xl sm:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
               Built by people who get both sides.
             </h2>
             <p className="text-brand-slate text-sm sm:text-base leading-relaxed font-medium">
               We started Wattfor because we saw how disconnected standard agencies were from the reality of contractor work. We know how busy your crew is, how expensive lead generation lists are, and how hard it is to maintain a professional local presence. Clay understands the trades; Marcus understands the code.
             </p>
 
-            <div className="inline-flex items-center space-x-2 bg-brand-copper/10 text-brand-copper px-4 py-2 font-mono text-[9px] uppercase tracking-widest font-bold border border-brand-copper/20 rounded-full">
+            <div className="inline-flex items-center space-x-2 bg-brand-copper/10 text-brand-copper px-4 py-2 text-[9px] uppercase tracking-widest font-bold border border-brand-copper/20 rounded-full">
               <ShieldCheck className="w-4 h-4" />
               <span>Domain Expertise Verified</span>
             </div>
@@ -64,10 +64,10 @@ export default function About() {
                   </div>
 
                   <div className="space-y-1">
-                    <h3 className="font-display text-3xl font-bold uppercase tracking-wider text-brand-navy leading-none">
+                    <h3 className="text-3xl font-bold uppercase tracking-wider text-brand-navy leading-none">
                       {fd.name}
                     </h3>
-                    <p className="font-mono text-[9px] text-brand-copper uppercase tracking-widest font-bold">
+                    <p className="text-[9px] text-brand-copper uppercase tracking-widest font-bold">
                       {fd.role}
                     </p>
                   </div>

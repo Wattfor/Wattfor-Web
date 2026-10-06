@@ -63,13 +63,13 @@ export default function Social() {
       {/* Section Header */}
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 mb-10 sm:mb-14">
         <div className="max-w-2xl text-left space-y-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             // CLIENT FEEDBACK
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             What local crew owners say.
           </h2>
-          <p className="text-brand-slate text-xs font-mono uppercase tracking-wider flex items-center gap-1.5 font-bold">
+          <p className="text-brand-slate text-xs uppercase tracking-wider flex items-center gap-1.5 font-bold">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
             <span>Compounding customer satisfaction</span>
           </p>
@@ -96,7 +96,7 @@ export default function Social() {
                   ))}
                 </div>
                 {/* Quote */}
-                <p className="text-brand-navy text-xs sm:text-sm font-sans leading-relaxed font-semibold italic">
+                <p className="text-brand-navy text-xs sm:text-sm leading-relaxed font-semibold italic">
                   &ldquo;{test.quote}&rdquo;
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function Social() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-display text-sm sm:text-base uppercase font-bold text-brand-navy tracking-wider leading-none">
+                    <h4 className="text-sm sm:text-base uppercase font-bold text-brand-navy tracking-wider leading-none">
                       {test.name}
                     </h4>
                     <span className="text-[9px] text-brand-slate font-medium block mt-0.5">
@@ -121,10 +121,10 @@ export default function Social() {
                   </div>
                 </div>
                 <div className="text-right flex-shrink-0">
-                  <span className="font-mono text-[9px] text-brand-copper uppercase tracking-wider font-bold block">
+                  <span className="text-[9px] text-brand-copper uppercase tracking-wider font-bold block">
                     {test.trade}
                   </span>
-                  <span className="text-[8px] text-brand-slate font-mono uppercase tracking-wider block mt-0.5">
+                  <span className="text-[8px] text-brand-slate uppercase tracking-wider block mt-0.5">
                     {test.location}
                   </span>
                 </div>

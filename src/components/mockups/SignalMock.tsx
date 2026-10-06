@@ -5,7 +5,7 @@ import { Star, MapPin, Award, Search, Compass } from "lucide-react";
 
 export default function SignalMock() {
   return (
-    <div className="w-full bg-brand-navy border border-white/10 rounded-2xl overflow-hidden font-mono shadow-2xl relative select-none">
+    <div className="w-full bg-brand-navy border border-white/10 rounded-2xl overflow-hidden shadow-2xl relative select-none">
       {/* Header Bar */}
       <div className="bg-black/35 px-4 py-3 flex items-center justify-between border-b border-white/5">
         <div className="flex space-x-1.5">
@@ -70,11 +70,11 @@ export default function SignalMock() {
             <div className="text-brand-copper text-[10px] font-bold uppercase tracking-wider">// SIGNAL INTENSITY</div>
             <div className="space-y-1">
               <span className="text-[9px] text-white/40 block">LOCAL MAP PACK POSITION</span>
-              <span className="font-display text-2xl font-black text-white uppercase tracking-wider">RANK #1</span>
+              <span className="text-2xl font-black text-white uppercase tracking-wider">RANK #1</span>
             </div>
             <div className="space-y-1">
               <span className="text-[9px] text-white/40 block">CITATIONS INDEXED</span>
-              <span className="font-display text-2xl font-black text-white uppercase tracking-wider">94 CITATIONS</span>
+              <span className="text-2xl font-black text-white uppercase tracking-wider">94 CITATIONS</span>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export default function SignalMock() {
             </div>
             <div>
               <span className="text-[9px] text-white/80 font-bold block">Denver Metro Pack</span>
-              <span className="text-[8px] text-white/40 block font-mono">GBP: FULLY COMPLIANT</span>
+              <span className="text-[8px] text-white/40 block ">GBP: FULLY COMPLIANT</span>
             </div>
           </div>
 

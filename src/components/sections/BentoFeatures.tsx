@@ -30,10 +30,10 @@ export default function BentoFeatures() {
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 space-y-10 sm:space-y-12">
         {/* Header */}
         <div className="max-w-xl text-left space-y-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             // PLATFORM BENCHMARKS
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+          <h2 className="text-4xl sm:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             What every site receives.
           </h2>
         </div>
@@ -43,10 +43,10 @@ export default function BentoFeatures() {
           {/* Card 1: Checklist */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300">
             <div className="space-y-4">
-              <span className="font-mono text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
+              <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
                 // COMPONENT LIST
               </span>
-              <h3 className="font-display text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
+              <h3 className="text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
                 Included Specs
               </h3>
               <ul className="space-y-3 pt-1">
@@ -60,7 +60,7 @@ export default function BentoFeatures() {
                 ))}
               </ul>
             </div>
-            <span className="text-[9px] font-mono text-brand-slate uppercase tracking-wider block border-t border-brand-navy/5 pt-4">
+            <span className="text-[9px] text-brand-slate uppercase tracking-wider block border-t border-brand-navy/5 pt-4">
               100% pre-configured on launch
             </span>
           </div>
@@ -68,10 +68,10 @@ export default function BentoFeatures() {
           {/* Card 2: Page Speed */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300">
             <div className="space-y-4">
-              <span className="font-mono text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
+              <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
                 // ENGINE STATS
               </span>
-              <h3 className="font-display text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
+              <h3 className="text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
                 Page Speed
               </h3>
 
@@ -90,10 +90,10 @@ export default function BentoFeatures() {
                       strokeDashoffset={200 - (200 * speedVal) / 100}
                     />
                   </svg>
-                  <span className="absolute font-display text-2xl font-black text-brand-navy">{speedVal}</span>
+                  <span className="absolute text-2xl font-black text-brand-navy">{speedVal}</span>
                 </div>
                 <div className="space-y-1">
-                  <div className="font-mono text-[9px] text-emerald-500 font-bold uppercase tracking-wider">
+                  <div className="text-[9px] text-emerald-500 font-bold uppercase tracking-wider">
                      Core Web Vitals
                   </div>
                   <p className="text-brand-slate text-[10px] sm:text-xs leading-relaxed font-medium">
@@ -102,7 +102,7 @@ export default function BentoFeatures() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-1.5 text-[9px] font-mono text-emerald-500 uppercase font-bold border-t border-brand-navy/5 pt-4">
+            <div className="flex items-center gap-1.5 text-[9px] text-emerald-500 uppercase font-bold border-t border-brand-navy/5 pt-4">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               <span>99.98% Measured Uptime</span>
             </div>
@@ -111,21 +111,21 @@ export default function BentoFeatures() {
           {/* Card 3: Ownership — spans 2 cols on sm, 1 on lg */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300 sm:col-span-2 lg:col-span-1">
             <div className="space-y-4">
-              <span className="font-mono text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
+              <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
                 // COMPLIANCE CODE
               </span>
-              <h3 className="font-display text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
+              <h3 className="text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
                 Your Domain
               </h3>
               <p className="text-brand-slate text-xs sm:text-sm leading-relaxed font-medium">
                 Unlike general agencies who lease you website codes, Wattfor ensures you own your
                 domain names, GBP listings, client data, and final assets under full legal terms.
               </p>
-              <div className="bg-brand-navy/5 p-3.5 border-l-2 border-brand-copper text-[10px] text-brand-slate font-mono uppercase tracking-wide leading-relaxed rounded-r-xl">
+              <div className="bg-brand-navy/5 p-3.5 border-l-2 border-brand-copper text-[10px] text-brand-slate uppercase tracking-wide leading-relaxed rounded-r-xl">
                 contract segment // section 9: domain and profile assets belong 100% to client.
               </div>
             </div>
-            <div className="flex items-center gap-1.5 text-[9px] font-mono text-brand-navy uppercase font-bold border-t border-brand-navy/5 pt-4">
+            <div className="flex items-center gap-1.5 text-[9px] text-brand-navy uppercase font-bold border-t border-brand-navy/5 pt-4">
               <Lock className="w-3.5 h-3.5 text-brand-copper" />
               <span>Full Portability Guaranteed</span>
             </div>

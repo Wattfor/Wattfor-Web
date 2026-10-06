@@ -55,13 +55,13 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 space-y-12 sm:space-y-16 relative z-10">
         {/* Section Header */}
         <div className="max-w-2xl text-left space-y-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             // ACTIVE PROOFS
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white tracking-tight leading-none">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white tracking-tight leading-none">
             Our Trade Portfolio.
           </h2>
-          <p className="text-brand-slate text-sm font-sans font-medium">
+          <p className="text-brand-slate text-sm font-medium">
             Take a look at local contractor websites designed, coded, and optimized by Wattfor.
           </p>
         </div>
@@ -89,21 +89,21 @@ export default function Portfolio() {
               {/* Title & Info */}
               <div className="space-y-3 sm:space-y-4">
                 <div>
-                  <span className="font-mono text-[9px] text-brand-copper uppercase tracking-widest font-bold block mb-1">
+                  <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block mb-1">
                     // {proj.trade} · {proj.location}
                   </span>
-                  <h3 className="font-display text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
                     {proj.title}
                   </h3>
                 </div>
 
                 {/* Metric Callout */}
                 <div className="bg-white/5 border border-white/5 p-3 sm:p-4 rounded-xl space-y-1">
-                  <span className="font-mono text-[9px] text-emerald-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
+                  <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
                     <CheckCircle className="w-3.5 h-3.5 flex-shrink-0" />
                     <span>METRIC ACHIEVED: {proj.metric}</span>
                   </span>
-                  <p className="text-white/60 text-xs font-sans leading-relaxed font-medium">
+                  <p className="text-white/60 text-xs leading-relaxed font-medium">
                     {proj.metricDesc}
                   </p>
                 </div>

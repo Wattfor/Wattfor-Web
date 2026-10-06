@@ -31,11 +31,11 @@ export default function ClosingCta({ onCtaClick }: ClosingCtaProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
           {/* Left Column: Text Pitch */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
-            <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
               // TERMINAL RUNWAY
             </span>
 
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold uppercase tracking-tight leading-[0.95] text-white">
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold uppercase tracking-tight leading-[0.95] text-white">
               Stop losing jobs <br className="hidden sm:block" />
               to a search bar.
             </h2>
@@ -57,7 +57,7 @@ export default function ClosingCta({ onCtaClick }: ClosingCtaProps) {
               </Button>
             </div>
 
-            <p className="text-[10px] font-mono text-brand-slate uppercase tracking-widest font-bold">
+            <p className="text-[10px] text-brand-slate uppercase tracking-widest font-bold">
               Expect a direct callback within 24 hours · Billed month-to-month
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function ClosingCta({ onCtaClick }: ClosingCtaProps) {
           <div className="lg:col-span-5 flex justify-center w-full">
             <div className="w-full max-w-sm bg-black/35 backdrop-blur-md border border-white/10 p-5 sm:p-6 rounded-2xl sm:rounded-3xl shadow-xl space-y-4">
               <div className="flex justify-between items-center pb-3 border-b border-white/5">
-                <span className="font-mono text-[9px] text-brand-copper uppercase tracking-widest font-bold flex items-center gap-1.5">
+                <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold flex items-center gap-1.5">
                   <Calendar className="w-3.5 h-3.5" />
                   <span>Interactive Scheduler</span>
                 </span>
@@ -74,7 +74,7 @@ export default function ClosingCta({ onCtaClick }: ClosingCtaProps) {
               </div>
 
               <div className="space-y-2 text-left">
-                <h4 className="font-display text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
+                <h4 className="text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
                   Select a Preview Slot
                 </h4>
                 <p className="text-brand-slate text-[10px] sm:text-xs font-medium leading-relaxed">
@@ -93,8 +93,8 @@ export default function ClosingCta({ onCtaClick }: ClosingCtaProps) {
                         : "bg-white/5 border-white/5 text-white/40"
                     }`}
                   >
-                    <span className="text-[8px] sm:text-[9px] font-mono uppercase font-bold">{day.name}</span>
-                    <span className="text-xs sm:text-sm font-display mt-0.5">{day.date}</span>
+                    <span className="text-[8px] sm:text-[9px] uppercase font-bold">{day.name}</span>
+                    <span className="text-xs sm:text-sm mt-0.5">{day.date}</span>
                   </div>
                 ))}
               </div>
@@ -109,16 +109,16 @@ export default function ClosingCta({ onCtaClick }: ClosingCtaProps) {
                     key={idx}
                     className="flex justify-between items-center bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-lg sm:rounded-xl hover:border-brand-copper/30 transition-all duration-150"
                   >
-                    <span className="font-mono text-[9px] sm:text-[10px] text-white font-bold flex items-center gap-1.5">
+                    <span className="text-[9px] sm:text-[10px] text-white font-bold flex items-center gap-1.5">
                       <Clock className="w-3 h-3 text-brand-copper" />
                       <span>{slot.time}</span>
                     </span>
-                    <span className="text-[9px] font-mono text-brand-slate font-bold">{slot.text}</span>
+                    <span className="text-[9px] text-brand-slate font-bold">{slot.text}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center gap-1.5 text-[9px] font-mono text-emerald-400 justify-center">
+              <div className="flex items-center gap-1.5 text-[9px] text-emerald-400 justify-center">
                 <Check className="w-3.5 h-3.5" />
                 <span>3 slots available this week</span>
               </div>

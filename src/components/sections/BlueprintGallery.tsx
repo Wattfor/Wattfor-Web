@@ -102,13 +102,13 @@ export default function BlueprintGallery() {
       <div className="max-w-7xl mx-auto px-6 space-y-16">
         {/* Header */}
         <div className="max-w-xl text-left space-y-4">
-          <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             // ARCHITECTURAL PORTFOLIO
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+          <h2 className="text-4xl sm:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             Structural Blueprint Gallery.
           </h2>
-          <p className="text-brand-slate text-sm font-sans font-medium">
+          <p className="text-brand-slate text-sm font-medium">
             Clean, optimized local schema structures and wireframe nodes that we implement for your business website.
           </p>
         </div>
@@ -129,10 +129,10 @@ export default function BlueprintGallery() {
                 {bp.icon}
               </div>
               <div className="space-y-1">
-                <span className="font-mono text-[8px] text-brand-copper uppercase tracking-widest font-bold">
+                <span className="text-[8px] text-brand-copper uppercase tracking-widest font-bold">
                   {bp.tag}
                 </span>
-                <h4 className="font-display text-xl font-bold uppercase text-brand-navy tracking-wider">
+                <h4 className="text-xl font-bold uppercase text-brand-navy tracking-wider">
                   {bp.title}
                 </h4>
               </div>

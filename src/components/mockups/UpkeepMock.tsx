@@ -5,7 +5,7 @@ import { Shield, RefreshCcw, Cpu, Server, Check } from "lucide-react";
 
 export default function UpkeepMock() {
   return (
-    <div className="w-full bg-[#152238] border border-white/10 rounded-2xl overflow-hidden font-mono shadow-2xl relative select-none">
+    <div className="w-full bg-[#152238] border border-white/10 rounded-2xl overflow-hidden shadow-2xl relative select-none">
       {/* Header Bar */}
       <div className="bg-black/35 px-4 py-3 flex items-center justify-between border-b border-white/5">
         <div className="flex space-x-1.5">
@@ -64,11 +64,11 @@ export default function UpkeepMock() {
             <div className="text-brand-copper text-[10px] font-bold uppercase tracking-wider">// PLATFORM SECURE</div>
             <div className="space-y-1">
               <span className="text-[9px] text-white/40 block">UPTIME METRIC</span>
-              <span className="font-display text-2xl font-black text-white uppercase tracking-wider">99.98%</span>
+              <span className="text-2xl font-black text-white uppercase tracking-wider">99.98%</span>
             </div>
             <div className="space-y-1">
               <span className="text-[9px] text-white/40 block">BACKUP SYNC</span>
-              <span className="font-display text-2xl font-black text-white uppercase tracking-wider">DAILY</span>
+              <span className="text-2xl font-black text-white uppercase tracking-wider">DAILY</span>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export default function UpkeepMock() {
             </div>
             <div>
               <span className="text-[9px] text-white/80 font-bold block">Uptime Guard</span>
-              <span className="text-[8px] text-white/40 block font-mono">MITIGATED: 0 THREATS</span>
+              <span className="text-[8px] text-white/40 block ">MITIGATED: 0 THREATS</span>
             </div>
           </div>
 

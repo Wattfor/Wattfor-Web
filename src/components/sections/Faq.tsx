@@ -42,13 +42,13 @@ export default function Faq() {
       <div className="max-w-4xl mx-auto px-5 sm:px-10 lg:px-16 space-y-12 sm:space-y-16">
         {/* Section Header */}
         <div className="text-center sm:text-left space-y-3 max-w-xl">
-          <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             // RESOLVING AMBIGUITY
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             Frequently Asked Questions
           </h2>
-          <p className="text-brand-slate text-sm font-sans font-medium">
+          <p className="text-brand-slate text-sm font-medium">
             Everything you need to know about ownership, plans, and flat-rate contracts.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function Faq() {
                   onClick={() => handleToggle(idx)}
                   className="w-full flex justify-between items-center px-5 sm:px-6 py-4 sm:py-5 text-left cursor-pointer select-none gap-4"
                 >
-                  <span className="font-display text-lg sm:text-2xl uppercase tracking-wide font-extrabold text-brand-navy leading-snug">
+                  <span className="text-lg sm:text-2xl uppercase tracking-wide font-extrabold text-brand-navy leading-snug">
                     {faq.q}
                   </span>
                   <div

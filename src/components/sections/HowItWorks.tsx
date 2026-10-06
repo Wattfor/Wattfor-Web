@@ -32,10 +32,10 @@ export default function HowItWorks() {
         
         {/* Section Header */}
         <div className="max-w-xl text-left space-y-4 mb-20">
-          <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             // WORKFLOW PIPELINE
           </span>
-          <h2 className="font-display text-5xl sm:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+          <h2 className="text-5xl sm:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             Three Steps. Zero Guesswork.
           </h2>
         </div>
@@ -59,14 +59,14 @@ export default function HowItWorks() {
                 >
                   {/* Step bubble */}
                   <div className="flex justify-between items-start">
-                    <div className="w-12 h-12 bg-brand-navy text-white flex items-center justify-center font-display text-2xl font-bold select-none rounded-full group-hover:bg-brand-copper transition-colors">
+                    <div className="w-12 h-12 bg-brand-navy text-white flex items-center justify-center text-2xl font-bold select-none rounded-full group-hover:bg-brand-copper transition-colors">
                       {step.idx}
                     </div>
                     <Icon className="w-5 h-5 text-brand-slate group-hover:text-brand-copper transition-colors" />
                   </div>
 
                   <div className="space-y-3">
-                    <h3 className="font-display text-3xl uppercase font-bold text-brand-navy leading-none">
+                    <h3 className="text-3xl uppercase font-bold text-brand-navy leading-none">
                       {step.title}
                     </h3>
                     <p className="text-brand-slate text-sm leading-relaxed font-medium">

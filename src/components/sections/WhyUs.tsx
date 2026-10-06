@@ -40,10 +40,10 @@ export default function WhyUs() {
           
           {/* Header Column */}
           <div className="lg:col-span-5 space-y-6">
-            <span className="font-mono text-xs uppercase tracking-widest text-brand-copper font-bold block">
+            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
               // POSITIONING BRIEF
             </span>
-            <h2 className="font-display text-5xl sm:text-6xl font-extrabold uppercase tracking-tight leading-none">
+            <h2 className="text-5xl sm:text-6xl font-extrabold uppercase tracking-tight leading-none">
               Not an Agency. <br />
               A Trade Specialist.
             </h2>
@@ -52,10 +52,10 @@ export default function WhyUs() {
             </p>
             
             <div className="border-t border-white/10 pt-6 mt-8 space-y-3 max-w-sm">
-              <div className="flex items-center space-x-3 text-xs font-mono text-brand-copper uppercase tracking-wider font-bold">
+              <div className="flex items-center space-x-3 text-xs text-brand-copper uppercase tracking-wider font-bold">
                 <span>🔧 SPECS: SPECIALIST VS GENERALIST</span>
               </div>
-              <p className="text-white/60 text-xs leading-relaxed font-mono">
+              <p className="text-white/60 text-xs leading-relaxed ">
                 Generalist agencies try to market everyone from local bakeries to law firms. We do one thing: we build websites that rank for tradespeople.
               </p>
             </div>
@@ -78,7 +78,7 @@ export default function WhyUs() {
                     <Icon className="w-5 h-5" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-display text-2xl uppercase font-bold text-white leading-none">
+                    <h3 className="text-2xl uppercase font-bold text-white leading-none">
                       {pt.title}
                     </h3>
                     <p className="text-brand-slate text-xs leading-relaxed font-medium">
