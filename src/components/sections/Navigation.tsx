@@ -44,15 +44,17 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
         }`}
       >
         <div className="mx-auto flex justify-between items-center w-full">
-          {/* Logo / Wordmark */}
+          {/* Logo / Wordmark — white on dark hero, navy when scrolled */}
           <a
             href="#"
             className="flex items-center space-x-2.5 hover:opacity-90 transition-all duration-300"
           >
             <img
-              src="/wattfor.svg"
+              src="/logo.svg"
               alt="Wattfor Logo"
-              className="h-10 w-10 object-contain transition-all duration-300"
+              className={`h-10 w-auto transition-all duration-300 ${
+                isScrolled ? "" : "invert"
+              }`}
             />
             <span className={`font-display text-2xl lowercase tracking-wider font-extrabold transition-colors duration-300 ${
               isScrolled ? "text-brand-navy" : "text-white"
@@ -135,9 +137,9 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
                   className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
                 >
                   <img
-                    src="/wattfor.svg"
+                    src="/logo.svg"
                     alt="Wattfor Logo"
-                    className="h-12 w-12 object-contain"
+                    className="h-12 w-auto"
                   />
                   <span className="font-display text-3xl lowercase tracking-wider font-extrabold text-brand-navy">
                     wattfor
