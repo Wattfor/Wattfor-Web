@@ -1,0 +1,61 @@
+"use client";
+
+import React, { useState } from "react";
+import Navigation from "../components/sections/Navigation";
+import Hero from "../components/sections/Hero";
+import Services from "../components/sections/Services";
+import Portfolio from "../components/sections/Portfolio";
+import BentoFeatures from "../components/sections/BentoFeatures";
+import BlueprintGallery from "../components/sections/BlueprintGallery";
+import Pricing from "../components/sections/Pricing";
+import Social from "../components/sections/Social";
+import Faq from "../components/sections/Faq";
+import Footer from "../components/sections/Footer";
+import Modal from "../components/ui/Modal";
+
+export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const triggerModal = () => {
+    setIsModalOpen(true);
+  };
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {/* Sticky Navigation */}
+      <Navigation onCtaClick={triggerModal} />
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <Hero onCtaClick={triggerModal} />
+
+        {/* Services alternating panels */}
+        <Services onCtaClick={triggerModal} />
+
+        {/* Portfolio section representing completed site builds */}
+        <Portfolio />
+
+        {/* Bento specifications list */}
+        <BentoFeatures />
+
+        {/* Wireframe / blueprint showcase grid */}
+        <BlueprintGallery />
+
+        {/* Transparent side-by-side Pricing */}
+        <Pricing onCtaClick={triggerModal} />
+
+        {/* Testimonial sliding marquee */}
+        <Social />
+
+        {/* Interactive FAQ Accordions */}
+        <Faq />
+      </main>
+
+      {/* Footer info grid & unified CTA */}
+      <Footer onCtaClick={triggerModal} />
+
+      {/* Action capture modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </div>
+  );
+}
