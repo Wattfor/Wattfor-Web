@@ -62,17 +62,17 @@ export default function Hero({ onCtaClick }: HeroProps) {
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full"
             >
               <ShieldCheck className="w-3.5 h-3.5 text-brand-sky flex-shrink-0" />
-              <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-brand-sky font-bold">
+              <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-brand-sky font-bold">
                 Websites &amp; Local SEO for Trade Contractors
               </span>
             </motion.div>
 
-            {/* Mixed Serif / Display Headline */}
+            {/* Headline */}
             <motion.h1 variants={itemVariants} className="tracking-tight leading-none text-white text-center">
-              <span className="font-serif italic font-normal text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-brand-sky block normal-case mb-1 sm:mb-2">
+              <span className="font-normal text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-brand-sky block normal-case mb-1 sm:mb-2">
                 wired for trades.
               </span>
-              <span className="font-display text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase font-black block">
+              <span className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase font-black block">
                 Built for Search.
               </span>
             </motion.h1>
@@ -80,7 +80,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="text-white/70 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-medium font-sans text-center"
+              className="text-white/70 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-medium text-center"
             >
               We build high-speed websites and manage local search visibility for electricians,
               plumbers, HVAC, and roofers — so the next job goes to your crew, not whoever ranks
@@ -99,9 +99,6 @@ export default function Hero({ onCtaClick }: HeroProps) {
                 <span>Contact Us</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-              {/* <p className="text-[9px] sm:text-[10px] font-mono text-white/40 uppercase tracking-widest font-bold self-center text-center">
-                Flat-rate plans · No locked contracts · 7-day delivery
-              </p> */}
             </motion.div>
           </motion.div>
         </div>
@@ -120,7 +117,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
           ].map((brand, i) => (
             <span
               key={i}
-              className="font-display text-base sm:text-xl uppercase tracking-widest font-extrabold text-white whitespace-nowrap"
+              className="text-base sm:text-xl uppercase tracking-widest font-extrabold text-white whitespace-nowrap"
             >
               {brand}
             </span>

@@ -44,27 +44,25 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
         }`}
       >
         <div className="mx-auto flex justify-between items-center w-full">
-          {/* Logo / Wordmark — white on dark hero, navy when scrolled */}
+          {/* Logo / Wordmark */}
           <a
             href="#"
             className="flex items-center space-x-2.5 hover:opacity-90 transition-all duration-300"
           >
             <img
-              src="/logo.svg"
+              src="/wattfor.svg"
               alt="Wattfor Logo"
-              className={`h-10 w-auto transition-all duration-300 ${
-                isScrolled ? "" : "invert"
-              }`}
+              className="h-10 w-10 object-contain transition-all duration-300"
             />
-            <span className={`font-display text-2xl lowercase tracking-wider font-extrabold transition-colors duration-300 ${
+            <span className={`text-2xl lowercase tracking-wider font-extrabold transition-colors duration-300 ${
               isScrolled ? "text-brand-navy" : "text-white"
             }`}>
               wattfor
             </span>
           </a>
 
-          {/* Desktop Nav Links — white on dark hero, slate when scrolled */}
-          <nav className="hidden md:flex space-x-8 text-xs font-mono uppercase tracking-widest items-center font-bold">
+          {/* Desktop Nav Links */}
+          <nav className="hidden md:flex space-x-8 text-xs uppercase tracking-widest items-center font-bold">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -81,7 +79,7 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
             ))}
           </nav>
 
-          {/* Desktop CTA — white pill at top, brand pill when scrolled */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             {isScrolled ? (
               <Button onClick={onCtaClick} variant="primary" className="py-2 px-5">
@@ -90,7 +88,7 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
             ) : (
               <button
                 onClick={onCtaClick}
-                className="bg-white text-brand-navy hover:bg-brand-sky text-xs font-mono font-bold uppercase tracking-widest py-2.5 px-6 rounded-full shadow-sm transition-colors duration-200"
+                className="bg-white text-brand-navy hover:bg-brand-sky text-xs font-bold uppercase tracking-widest py-2.5 px-6 rounded-full shadow-sm transition-colors duration-200"
               >
                 Contact Us
               </button>
@@ -137,11 +135,11 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
                   className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
                 >
                   <img
-                    src="/logo.svg"
+                    src="/wattfor.svg"
                     alt="Wattfor Logo"
-                    className="h-12 w-auto"
+                    className="h-12 w-12 object-contain"
                   />
-                  <span className="font-display text-3xl lowercase tracking-wider font-extrabold text-brand-navy">
+                  <span className="text-3xl lowercase tracking-wider font-extrabold text-brand-navy">
                     wattfor
                   </span>
                 </a>
@@ -151,7 +149,7 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
                       key={link.name}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="font-display text-3xl uppercase tracking-wider font-bold text-brand-navy hover:text-brand-copper transition-colors"
+                      className="text-3xl uppercase tracking-wider font-bold text-brand-navy hover:text-brand-copper transition-colors"
                     >
                       {link.name}
                     </a>
@@ -171,7 +169,7 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
                   <span>Contact Us</span>
                   <ArrowRight className="w-4 h-4" />
                 </Button>
-                <p className="text-[9px] font-mono text-center text-brand-slate uppercase tracking-widest font-bold">
+                <p className="text-[9px] text-center text-brand-slate uppercase tracking-widest font-bold">
                   No lock-in terms · Billed month-to-month
                 </p>
               </div>
