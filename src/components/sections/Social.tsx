@@ -64,7 +64,7 @@ export default function Social() {
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 mb-10 sm:mb-14">
         <div className="max-w-2xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            // CLIENT FEEDBACK
+            - CLIENT FEEDBACK
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             What local crew owners say.

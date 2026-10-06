@@ -33,7 +33,7 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="max-w-xl text-left space-y-4 mb-20">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            // WORKFLOW PIPELINE
+            - WORKFLOW PIPELINE
           </span>
           <h2 className="text-5xl sm:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             Three Steps. Zero Guesswork.

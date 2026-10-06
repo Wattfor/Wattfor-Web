@@ -25,7 +25,7 @@ export default function BuildMock() {
         
         {/* Left Column: Config JSON */}
         <div className="md:col-span-6 space-y-3 text-[10px] text-left text-white/60">
-          <div className="text-brand-copper font-bold">// INITIALIZE SITE DEPLOY</div>
+          <div className="text-brand-copper font-bold">- INITIALIZE SITE DEPLOY</div>
           <div>
             <span className="text-white/40">1 </span>
             <span className="text-emerald-400">"siteName"</span>: <span className="text-brand-copper">"Apex Electrical"</span>,

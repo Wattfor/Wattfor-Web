@@ -41,7 +41,7 @@ export default function WhyUs() {
           {/* Header Column */}
           <div className="lg:col-span-5 space-y-6">
             <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-              // POSITIONING BRIEF
+              - POSITIONING BRIEF
             </span>
             <h2 className="text-5xl sm:text-6xl font-extrabold uppercase tracking-tight leading-none">
               Not an Agency. <br />

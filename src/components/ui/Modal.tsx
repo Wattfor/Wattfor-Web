@@ -152,7 +152,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                 >
                   <div className="space-y-2">
                     <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
-                      // Company Name
+                      - Company Name
                     </label>
                     <input
                       type="text"
@@ -167,7 +167,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
 
                   <div className="space-y-3">
                     <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
-                      // Your Trade Specialty
+                      - Your Trade Specialty
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {trades.map((trade) => {
@@ -219,7 +219,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
-                          // Owner / Contact Name
+                          - Owner / Contact Name
                         </label>
                         <input
                           type="text"
@@ -233,7 +233,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                       </div>
                       <div className="space-y-2">
                         <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
-                          // Phone Number
+                          - Phone Number
                         </label>
                         <input
                           type="tel"
@@ -249,7 +249,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
 
                     <div className="space-y-2">
                       <label className="block text-[10px] uppercase tracking-wider text-brand-slate font-bold">
-                        // Email Address
+                        - Email Address
                       </label>
                       <input
                         type="email"
@@ -327,11 +327,11 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                   {/* Faux technical read-out */}
                   <div className="bg-brand-navy text-brand-offwhite text-left text-xs p-5 rounded-2xl space-y-1 max-w-md mx-auto border border-white/5 opacity-90 select-none shadow-md">
                     <p className="text-brand-copper font-bold">⚡ TERMINAL STATUS: OK</p>
-                    <p className="text-white/40">// DISPATCH INITIATED FOR: {formData.tradeType}</p>
+                    <p className="text-white/40">- DISPATCH INITIATED FOR: {formData.tradeType}</p>
                     <p className="text-emerald-400">&gt; routing pipeline... complete</p>
                     <p className="text-emerald-400">&gt; establishing search nodes... sync</p>
                     <p className="text-emerald-400">&gt; allocating coordinator... locked</p>
-                    <p className="text-white/40">// EXPECT PHONE SCHEDULER CALLBACK IN 24 HOURS</p>
+                    <p className="text-white/40">- EXPECT PHONE SCHEDULER CALLBACK IN 24 HOURS</p>
                   </div>
 
                   <div className="pt-4">

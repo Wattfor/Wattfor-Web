@@ -103,7 +103,7 @@ export default function BlueprintGallery() {
         {/* Header */}
         <div className="max-w-xl text-left space-y-4">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            // ARCHITECTURAL PORTFOLIO
+            - ARCHITECTURAL PORTFOLIO
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             Structural Blueprint Gallery.

@@ -32,7 +32,7 @@ export default function ClosingCta({ onCtaClick }: ClosingCtaProps) {
           {/* Left Column: Text Pitch */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
             <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-              // TERMINAL RUNWAY
+              - TERMINAL RUNWAY
             </span>
 
             <h2 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold uppercase tracking-tight leading-[0.95] text-white">

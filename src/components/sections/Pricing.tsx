@@ -96,7 +96,7 @@ export default function Pricing({ onCtaClick }: PricingProps) {
         {/* Section Header */}
         <div className="max-w-3xl text-left space-y-4">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            // COMPACT FEES
+            - COMPACT FEES
           </span>
           <h2 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold uppercase text-brand-navy tracking-tight leading-[0.95]">
             Transparent pricing. <br className="hidden sm:block" />
@@ -197,7 +197,7 @@ export default function Pricing({ onCtaClick }: PricingProps) {
         <div className="bg-white border border-brand-navy/5 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-6 group hover:border-brand-copper/30 transition-all duration-300">
           <div className="space-y-2 text-left">
             <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
-              // STANDALONE UPKEEP SUPPORT
+              - STANDALONE UPKEEP SUPPORT
             </span>
             <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider text-brand-navy">
               Hosting &amp; Maintenance — $50 to $100 / month

@@ -31,7 +31,7 @@ export default function BentoFeatures() {
         {/* Header */}
         <div className="max-w-xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            // PLATFORM BENCHMARKS
+            - PLATFORM BENCHMARKS
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             What every site receives.
@@ -44,7 +44,7 @@ export default function BentoFeatures() {
           <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300">
             <div className="space-y-4">
               <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
-                // COMPONENT LIST
+                - COMPONENT LIST
               </span>
               <h3 className="text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
                 Included Specs
@@ -69,7 +69,7 @@ export default function BentoFeatures() {
           <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300">
             <div className="space-y-4">
               <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
-                // ENGINE STATS
+                - ENGINE STATS
               </span>
               <h3 className="text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
                 Page Speed
@@ -112,7 +112,7 @@ export default function BentoFeatures() {
           <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300 sm:col-span-2 lg:col-span-1">
             <div className="space-y-4">
               <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
-                // COMPLIANCE CODE
+                - COMPLIANCE CODE
               </span>
               <h3 className="text-2xl sm:text-3xl uppercase font-bold text-brand-navy leading-none">
                 Your Domain
@@ -122,7 +122,7 @@ export default function BentoFeatures() {
                 domain names, GBP listings, client data, and final assets under full legal terms.
               </p>
               <div className="bg-brand-navy/5 p-3.5 border-l-2 border-brand-copper text-[10px] text-brand-slate uppercase tracking-wide leading-relaxed rounded-r-xl">
-                contract segment // section 9: domain and profile assets belong 100% to client.
+                contract segment - section 9: domain and profile assets belong 100% to client.
               </div>
             </div>
             <div className="flex items-center gap-1.5 text-[9px] text-brand-navy uppercase font-bold border-t border-brand-navy/5 pt-4">

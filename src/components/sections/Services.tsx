@@ -55,7 +55,7 @@ export default function Services({ onCtaClick }: ServicesProps) {
         {/* Section Header */}
         <div className="max-w-2xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            // SERVICE SPECS
+            - SERVICE SPECS
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             Engineered to convert clicks into phone calls.

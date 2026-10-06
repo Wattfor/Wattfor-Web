@@ -43,7 +43,7 @@ export default function Faq() {
         {/* Section Header */}
         <div className="text-center sm:text-left space-y-3 max-w-xl">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            // RESOLVING AMBIGUITY
+            - RESOLVING AMBIGUITY
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
             Frequently Asked Questions

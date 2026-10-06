@@ -67,7 +67,7 @@ export default function SignalMock() {
         <div className="md:col-span-5 flex flex-col justify-between space-y-4 text-left">
           
           <div className="space-y-3">
-            <div className="text-brand-copper text-[10px] font-bold uppercase tracking-wider">// SIGNAL INTENSITY</div>
+            <div className="text-brand-copper text-[10px] font-bold uppercase tracking-wider">- SIGNAL INTENSITY</div>
             <div className="space-y-1">
               <span className="text-[9px] text-white/40 block">LOCAL MAP PACK POSITION</span>
               <span className="text-2xl font-black text-white uppercase tracking-wider">RANK #1</span>

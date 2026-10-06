@@ -56,7 +56,7 @@ export default function Portfolio() {
         {/* Section Header */}
         <div className="max-w-2xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            // ACTIVE PROOFS
+            - ACTIVE PROOFS
           </span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white tracking-tight leading-none">
             Our Trade Portfolio.
@@ -90,7 +90,7 @@ export default function Portfolio() {
               <div className="space-y-3 sm:space-y-4">
                 <div>
                   <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block mb-1">
-                    // {proj.trade} · {proj.location}
+                    - {proj.trade} · {proj.location}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
                     {proj.title}

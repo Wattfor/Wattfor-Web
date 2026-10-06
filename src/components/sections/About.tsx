@@ -30,7 +30,7 @@ export default function About() {
           {/* Text Left */}
           <div className="lg:col-span-5 space-y-6">
             <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-              // TEAM CREDENTIALS
+              - TEAM CREDENTIALS
             </span>
             <h2 className="text-5xl sm:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
               Built by people who get both sides.

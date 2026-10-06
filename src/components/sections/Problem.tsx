@@ -16,7 +16,7 @@ export default function Problem() {
           className="flex justify-center items-center space-x-2"
         >
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold">
-            // THE SHORT CIRCUIT
+            - THE SHORT CIRCUIT
           </span>
         </motion.div>
 
