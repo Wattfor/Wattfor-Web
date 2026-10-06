@@ -45,10 +45,10 @@
   --color-brand-sky: #CBE1FC;
   --color-brand-border: rgba(2, 36, 47, 0.08);
 
-  --font-display: 'Power Grotesk', sans-serif;
-  --font-sans: 'Power Grotesk', sans-serif;
-  --font-serif: 'Power Grotesk', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Power Grotesk', var(--font-power-grotesk), sans-serif;
+  --font-sans: 'Power Grotesk', var(--font-power-grotesk), sans-serif;
+  --font-serif: 'Power Grotesk', var(--font-power-grotesk), sans-serif;
+  --font-mono: 'Power Grotesk', var(--font-power-grotesk), sans-serif;
 
   /* Custom xs breakpoint — phones in landscape / larger phones */
   --breakpoint-xs: 480px;
@@ -247,15 +247,16 @@ body {
 }
 
 @layer base {
-  * {
+  *, *::before, *::after {
     @apply border-border outline-ring/50;
+    font-family: 'Power Grotesk', var(--font-power-grotesk), sans-serif !important;
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Power Grotesk', sans-serif;
+    font-family: 'Power Grotesk', var(--font-power-grotesk), sans-serif !important;
   }
   html {
     @apply font-sans;
-    font-family: 'Power Grotesk', sans-serif;
+    font-family: 'Power Grotesk', var(--font-power-grotesk), sans-serif !important;
   }
 }
