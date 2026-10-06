@@ -43,18 +43,18 @@ export default function Hero({ onCtaClick }: HeroProps) {
         />
       </div>
 
-      {/* Subtle gradient overlays — preserves text readability without obscuring Silk */}
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/85 via-brand-navy/35 to-transparent pointer-events-none z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/70 via-transparent to-transparent pointer-events-none z-[1]" />
+      {/* Subtle overlays so centered text is crisp while Silk motion remains visible */}
+      <div className="absolute inset-0 bg-radial from-transparent via-brand-navy/20 to-brand-navy/75 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/60 via-transparent to-brand-navy/80 pointer-events-none z-[1]" />
 
-      {/* Main content — vertically centred, fills viewport */}
-      <div className="relative z-10 flex-1 flex items-center w-full px-5 sm:px-10 lg:px-16 pt-24 pb-6 sm:pt-28 sm:pb-8">
-        <div className="max-w-7xl mx-auto w-full">
+      {/* Main content — vertically centred and horizontally centered, fills viewport */}
+      <div className="relative z-10 flex-1 flex items-center justify-center w-full px-5 sm:px-10 lg:px-16 pt-24 pb-6 sm:pt-28 sm:pb-8">
+        <div className="max-w-5xl mx-auto w-full flex justify-center">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-2xl space-y-5 sm:space-y-6"
+            className="max-w-3xl mx-auto flex flex-col items-center text-center space-y-5 sm:space-y-6"
           >
             {/* Eyebrow Tag */}
             <motion.div
@@ -68,7 +68,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             </motion.div>
 
             {/* Mixed Serif / Display Headline */}
-            <motion.h1 variants={itemVariants} className="tracking-tight leading-none text-white">
+            <motion.h1 variants={itemVariants} className="tracking-tight leading-none text-white text-center">
               <span className="font-serif italic font-normal text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-brand-sky block normal-case mb-1 sm:mb-2">
                 wired for trades.
               </span>
@@ -80,7 +80,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="text-white/70 text-sm sm:text-base max-w-lg leading-relaxed font-medium font-sans"
+              className="text-white/70 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-medium font-sans text-center"
             >
               We build high-speed websites and manage local search visibility for electricians,
               plumbers, HVAC, and roofers — so the next job goes to your crew, not whoever ranks
@@ -90,16 +90,16 @@ export default function Hero({ onCtaClick }: HeroProps) {
             {/* CTA Row */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col xs:flex-row items-start gap-3 sm:gap-4 pt-1"
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-1 w-full"
             >
               <button
                 onClick={onCtaClick}
-                className="flex items-center gap-2 bg-white text-brand-navy hover:bg-brand-sky hover:text-brand-navy px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-sm shadow-md transition-colors duration-200 w-full xs:w-auto justify-center"
+                className="flex items-center gap-2 bg-white text-brand-navy hover:bg-brand-sky hover:text-brand-navy px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-sm shadow-md transition-colors duration-200 w-full sm:w-auto justify-center"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <p className="text-[9px] sm:text-[10px] font-mono text-white/40 uppercase tracking-widest font-bold self-center text-center xs:text-left">
+              <p className="text-[9px] sm:text-[10px] font-mono text-white/40 uppercase tracking-widest font-bold self-center text-center">
                 Flat-rate plans · No locked contracts · 7-day delivery
               </p>
             </motion.div>
