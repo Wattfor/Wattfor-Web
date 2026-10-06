@@ -38,14 +38,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={cn("h-full antialiased scroll-smooth", powerGrotesk.variable)}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className={cn("min-h-full flex flex-col text-brand-navy bg-brand-offwhite antialiased", powerGrotesk.className)}>
         {children}
       </body>

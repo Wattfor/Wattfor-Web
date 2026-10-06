@@ -99,9 +99,9 @@ export default function Hero({ onCtaClick }: HeroProps) {
                 <span>Contact Us</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <p className="text-[9px] sm:text-[10px] font-mono text-white/40 uppercase tracking-widest font-bold self-center text-center">
+              {/* <p className="text-[9px] sm:text-[10px] font-mono text-white/40 uppercase tracking-widest font-bold self-center text-center">
                 Flat-rate plans · No locked contracts · 7-day delivery
-              </p>
+              </p> */}
             </motion.div>
           </motion.div>
         </div>
