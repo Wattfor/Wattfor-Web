@@ -4,6 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 
+import dynamic from "next/dynamic";
+
+const Silk = dynamic(() => import("@/components/Silk"), { ssr: false });
+
 interface HeroProps {
   onCtaClick: () => void;
 }
@@ -28,16 +32,20 @@ export default function Hero({ onCtaClick }: HeroProps) {
 
   return (
     <section className="relative h-[100dvh] flex flex-col overflow-hidden bg-brand-navy text-white">
-      {/* Full-bleed background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80')`,
-        }}
-      />
-      {/* Gradient layers — heavier on mobile so text is always readable */}
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/98 via-brand-navy/85 to-brand-navy/50 sm:from-brand-navy/95 sm:via-brand-navy/75 sm:to-brand-navy/30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent" />
+      {/* Silk animated WebGL background */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <Silk
+          speed={5}
+          scale={1}
+          color="#0e3151"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
+      </div>
+
+      {/* Subtle gradient overlays — preserves text readability without obscuring Silk */}
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/85 via-brand-navy/35 to-transparent pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/70 via-transparent to-transparent pointer-events-none z-[1]" />
 
       {/* Main content — vertically centred, fills viewport */}
       <div className="relative z-10 flex-1 flex items-center w-full px-5 sm:px-10 lg:px-16 pt-24 pb-6 sm:pt-28 sm:pb-8">
