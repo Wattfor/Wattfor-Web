@@ -69,9 +69,9 @@ export default function Footer({ onCtaClick }: FooterProps) {
               className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
             >
               <img
-                src="/logo.svg"
+                src="/wattfor.svg"
                 alt="Wattfor Logo"
-                className="h-12 w-auto invert"
+                className="h-12 w-12 object-contain"
               />
               <span className="font-display text-3xl lowercase tracking-wider font-extrabold text-white">
                 wattfor
