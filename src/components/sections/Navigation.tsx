@@ -37,23 +37,25 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
   return (
     <>
       <header
-        className={`fixed z-40 transition-all duration-300 ${
+        className={`fixed z-40 transition-all duration-300 top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl rounded-full ${
           isScrolled
-            ? "top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl bg-brand-offwhite/90 border border-brand-navy/10 rounded-full shadow-lg backdrop-blur-md py-2 px-6"
-            : "top-0 left-0 w-full bg-transparent py-5 px-6 sm:px-12"
+            ? "bg-brand-offwhite/95 border border-brand-navy/10 shadow-xl backdrop-blur-xl py-2 px-5 sm:px-6"
+            : "bg-brand-navy/80 border border-white/20 shadow-2xl backdrop-blur-xl py-2 px-5 sm:px-6"
         }`}
       >
         <div className="mx-auto flex justify-between items-center w-full">
           {/* Logo / Wordmark */}
           <a
             href="#"
-            className="flex items-center space-x-2.5 hover:opacity-90 transition-all duration-300"
+            className="flex items-center space-x-3 group transition-transform duration-200 hover:scale-[1.02]"
           >
-            <img
-              src="/wattfor.svg"
-              alt="Wattfor Logo"
-              className="h-10 w-10 object-contain transition-all duration-300"
-            />
+            <div className="w-10 h-10 rounded-xl bg-white shadow-md border border-white/20 flex items-center justify-center p-1.5 transition-all duration-300 group-hover:shadow-lg flex-shrink-0">
+              <img
+                src="/wattfor.svg"
+                alt="Wattfor Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <span className={`text-2xl lowercase tracking-wider font-extrabold transition-colors duration-300 ${
               isScrolled ? "text-brand-navy" : "text-white"
             }`}>
@@ -132,13 +134,15 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
                 <a
                   href="#"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
+                  className="flex items-center space-x-3.5 hover:opacity-90 transition-opacity"
                 >
-                  <img
-                    src="/wattfor.svg"
-                    alt="Wattfor Logo"
-                    className="h-12 w-12 object-contain"
-                  />
+                  <div className="w-12 h-12 rounded-2xl bg-white shadow-md border border-brand-navy/10 flex items-center justify-center p-2 flex-shrink-0">
+                    <img
+                      src="/wattfor.svg"
+                      alt="Wattfor Logo"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                   <span className="text-3xl lowercase tracking-wider font-extrabold text-brand-navy">
                     wattfor
                   </span>

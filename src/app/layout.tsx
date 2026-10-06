@@ -34,7 +34,12 @@ export const metadata: Metadata = {
   title: "Wattfor — Premium Websites & Local SEO for Trade Contractors",
   description: "Wattfor builds professional, high-converting websites and manages local search presence for electricians, plumbers, HVAC pros, and roofers. Flat rates and zero setup fees.",
   icons: {
-    icon: "/wattfor.svg",
+    icon: [
+      { url: "/wattfor.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/wattfor.svg",
+    apple: "/wattfor.svg",
   },
 };
 
