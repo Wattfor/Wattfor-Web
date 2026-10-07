@@ -35,11 +35,11 @@ export const metadata: Metadata = {
   description: "Wattfor builds professional, high-converting websites and manages local search presence for electricians, plumbers, HVAC pros, and roofers. Flat rates and zero setup fees.",
   icons: {
     icon: [
-      { url: "/wattfor.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico" },
+      { url: "/wattfor.svg?v=2", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=2" },
     ],
-    shortcut: "/wattfor.svg",
-    apple: "/wattfor.svg",
+    shortcut: "/wattfor.svg?v=2",
+    apple: "/wattfor.svg?v=2",
   },
 };
 
