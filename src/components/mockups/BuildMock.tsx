@@ -33,11 +33,13 @@ export default function BuildMock() {
   ];
 
   return (
-    <div className="relative w-full rounded-xl overflow-hidden p-4 sm:p-7 flex items-center justify-center shadow-md border border-brand-navy/10 select-none">
+    <div className="relative w-full rounded-xl overflow-hidden p-3 xs:p-4 sm:p-7 flex items-center justify-center shadow-md border border-brand-navy/10 select-none">
       {/* Animated photo in the background */}
       <motion.img
         src="/images/service-bg-1.jpg"
         alt="Animated Background"
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none scale-105"
         animate={{
           scale: [1.02, 1.1, 1.02],
@@ -55,13 +57,15 @@ export default function BuildMock() {
       <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/20 via-transparent to-white/10 pointer-events-none" />
 
       {/* Foreground Floating Card with reduced border radius */}
-      <div className="relative z-10 w-full max-w-md bg-white/95 backdrop-blur-md rounded-xl p-5 sm:p-6 shadow-xl border border-brand-navy/10">
+      <div className="relative z-10 w-full max-w-md bg-white/95 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-xl border border-brand-navy/10">
         {/* Undraw Website Visitors SVG Illustration */}
         <div className="w-full bg-brand-offwhite/50 rounded-lg p-3 sm:p-4 mb-4 flex items-center justify-center border border-brand-navy/10 shadow-inner">
           <img
             src="/undraw_website-visitors_qy9c.svg"
             alt="Website Visitors"
-            className="h-28 sm:h-36 w-auto object-contain transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            className="h-24 xs:h-28 sm:h-36 w-auto object-contain transition-transform duration-300 hover:scale-105"
           />
         </div>
 
@@ -70,25 +74,25 @@ export default function BuildMock() {
           {items.map((item, idx) => (
             <div
               key={idx}
-              className={`flex items-center justify-between gap-3 ${idx > 0 ? "pt-3" : ""}`}
+              className={`flex items-center justify-between gap-2 xs:gap-3 ${idx > 0 ? "pt-3" : ""}`}
             >
-              <div>
-                <h4 className="text-brand-navy font-bold text-xs sm:text-sm leading-tight">
+              <div className="min-w-0 pr-1">
+                <h4 className="text-brand-navy font-bold text-xs sm:text-sm leading-tight truncate xs:whitespace-normal">
                   {item.title}
                 </h4>
-                <p className="text-brand-slate text-[11px] sm:text-xs mt-0.5 font-medium">
+                <p className="text-brand-slate text-[10px] sm:text-xs mt-0.5 font-medium truncate xs:whitespace-normal">
                   {item.subtitle}
                 </p>
               </div>
 
               <div className="shrink-0">
                 {item.status === "success" ? (
-                  <span className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
+                  <span className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/30 px-2 py-0.5 sm:px-3 sm:py-1 rounded-md text-[10px] sm:text-xs font-bold inline-flex items-center gap-1 shadow-xs">
                     <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
                     <span>{item.badge}</span>
                   </span>
                 ) : (
-                  <span className="bg-amber-500/10 text-amber-600 border border-amber-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
+                  <span className="bg-amber-500/10 text-amber-600 border border-amber-500/30 px-2 py-0.5 sm:px-3 sm:py-1 rounded-md text-[10px] sm:text-xs font-bold inline-flex items-center gap-1 shadow-xs">
                     <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5] animate-spin" />
                     <span>{item.badge}</span>
                   </span>
@@ -101,4 +105,3 @@ export default function BuildMock() {
     </div>
   );
 }
-

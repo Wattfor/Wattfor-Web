@@ -3,6 +3,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Button from "../ui/Button";
+import { FadeInUp, TextReveal } from "../ui/AnimatedText";
 
 interface FooterProps {
   onCtaClick: () => void;
@@ -37,28 +38,32 @@ export default function Footer({ onCtaClick }: FooterProps) {
 
       {/* 1. Top CTA Band */}
       <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 py-10 sm:py-12 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5 sm:gap-6">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white max-w-xl text-left leading-tight">
-            Supercharge your trade crew.
-          </h2>
-          <Button
-            onClick={onCtaClick}
-            variant="secondary"
-            className="bg-white text-brand-navy hover:bg-brand-sky hover:text-brand-navy px-7 py-3 sm:py-3.5 rounded-lg font-bold shadow-md transition-colors text-sm flex items-center justify-center gap-2 w-full sm:w-auto shrink-0 cursor-pointer"
-          >
-            <span>Contact Us</span>
-            <ArrowRight className="w-4 h-4" />
-          </Button>
+        <div className="max-w-7xl mx-auto border-x border-white/10 px-4 xs:px-5 sm:px-10 lg:px-16 py-10 sm:py-12 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5 sm:gap-6">
+          <TextReveal
+            text="Supercharge your trade crew."
+            as="h2"
+            className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white max-w-xl text-left leading-tight"
+          />
+          <FadeInUp delay={0.1}>
+            <Button
+              onClick={onCtaClick}
+              variant="secondary"
+              className="bg-white text-brand-navy hover:bg-brand-sky hover:text-brand-navy px-7 py-3 sm:py-3.5 rounded-lg font-bold shadow-md transition-colors text-sm flex items-center justify-center gap-2 w-full sm:w-auto shrink-0 cursor-pointer"
+            >
+              <span>Contact Us</span>
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </FadeInUp>
         </div>
       </div>
 
       {/* 2. Directory Grid & Background Wordmark */}
       <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 pt-12 sm:pt-16 pb-16 sm:pb-20 relative">
+        <div className="max-w-7xl mx-auto border-x border-white/10 px-4 xs:px-5 sm:px-10 lg:px-16 pt-12 sm:pt-16 pb-16 sm:pb-20 relative">
 
           {/* Giant Background Wordmark */}
-          <div className="absolute right-0 bottom-4 pointer-events-none select-none opacity-[0.07] overflow-hidden">
-            <span className="text-[6rem] sm:text-[10rem] md:text-[14rem] font-black text-brand-sky tracking-tighter leading-none whitespace-nowrap">
+          <div className="absolute right-0 bottom-4 pointer-events-none select-none opacity-[0.06] overflow-hidden">
+            <span className="text-[5rem] xs:text-[6rem] sm:text-[10rem] md:text-[14rem] font-black text-brand-sky tracking-tighter leading-none whitespace-nowrap">
               Wattfor
             </span>
           </div>
@@ -66,7 +71,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-10 sm:gap-12 relative z-10">
 
             {/* Logo / Brand Info */}
-            <div className="sm:col-span-2 md:col-span-4 space-y-4 text-left">
+            <FadeInUp delay={0.05} className="sm:col-span-2 md:col-span-4 space-y-4 text-left">
               <a
                 href="#"
                 className="flex items-center space-x-3.5 group hover:opacity-90 transition-opacity"
@@ -75,6 +80,8 @@ export default function Footer({ onCtaClick }: FooterProps) {
                   <img
                     src="/wattfor.svg"
                     alt="Wattfor Logo"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -86,13 +93,13 @@ export default function Footer({ onCtaClick }: FooterProps) {
                 We build professional websites and manage local search visibility for trade
                 contractors. Power your search. Power your bookings.
               </p>
-            </div>
+            </FadeInUp>
 
             {/* Directory Columns */}
             <div className="sm:col-span-2 md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
 
               {/* Product Column */}
-              <div className="space-y-3 sm:space-y-4 text-left">
+              <FadeInUp delay={0.1} className="space-y-3 sm:space-y-4 text-left">
                 <h4 className="text-[10px] uppercase tracking-widest text-brand-sky font-bold">
                   Product
                 </h4>
@@ -105,10 +112,10 @@ export default function Footer({ onCtaClick }: FooterProps) {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </FadeInUp>
 
               {/* Company Column */}
-              <div className="space-y-3 sm:space-y-4 text-left">
+              <FadeInUp delay={0.15} className="space-y-3 sm:space-y-4 text-left">
                 <h4 className="text-[10px] uppercase tracking-widest text-brand-sky font-bold">
                   Company
                 </h4>
@@ -121,10 +128,10 @@ export default function Footer({ onCtaClick }: FooterProps) {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </FadeInUp>
 
               {/* Connect Column */}
-              <div className="space-y-3 sm:space-y-4 text-left col-span-2 sm:col-span-1">
+              <FadeInUp delay={0.2} className="space-y-3 sm:space-y-4 text-left col-span-2 sm:col-span-1">
                 <h4 className="text-[10px] uppercase tracking-widest text-brand-sky font-bold">
                   Connect
                 </h4>
@@ -133,6 +140,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
                     <li key={idx}>
                       <a
                         href={link.href}
+                        rel="noopener noreferrer"
                         className={`hover:text-white transition-colors break-all ${
                           link.type === "email" ? "lowercase" : ""
                         }`}
@@ -142,7 +150,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </FadeInUp>
 
             </div>
           </div>
@@ -150,7 +158,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
       </div>
 
       {/* 3. Copyright Bar */}
-      <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 py-6 sm:py-8 flex flex-col sm:flex-row justify-between items-center text-[10px] text-brand-slate gap-3 sm:gap-4">
+      <div className="max-w-7xl mx-auto border-x border-white/10 px-4 xs:px-5 sm:px-10 lg:px-16 py-6 sm:py-8 flex flex-col sm:flex-row justify-between items-center text-[10px] text-brand-slate gap-3 sm:gap-4">
         <div className="flex items-center gap-1">
           <span className="font-semibold text-white/60">Wattfor</span>
           <span>© Copyright {currentYear}</span>

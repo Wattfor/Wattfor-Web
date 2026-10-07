@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
+import SmoothScroll from "@/components/providers/SmoothScroll";
 
 const powerGrotesk = localFont({
   src: [
@@ -45,9 +46,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={cn("h-full antialiased scroll-smooth", powerGrotesk.variable)}>
-      <body className={cn("min-h-full flex flex-col text-brand-navy bg-brand-offwhite antialiased", powerGrotesk.className)}>
-        {children}
+    <html lang="en" className={cn("h-full antialiased", powerGrotesk.variable)}>
+      <body className={cn("min-h-full flex flex-col text-brand-navy bg-brand-offwhite antialiased selection:bg-brand-copper selection:text-white", powerGrotesk.className)}>
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

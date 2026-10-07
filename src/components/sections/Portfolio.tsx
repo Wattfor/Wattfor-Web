@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import { TextReveal, FadeInUp } from "../ui/AnimatedText";
 
 export default function Portfolio() {
   const projects = [
@@ -52,18 +53,24 @@ export default function Portfolio() {
       {/* Subtle radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,114,44,0.06),transparent_70%)]" />
 
-      <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24 space-y-12 sm:space-y-16 relative z-10">
-        {/* Section Header */}
+      <div className="max-w-7xl mx-auto border-x border-white/10 px-4 xs:px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24 space-y-12 sm:space-y-16 relative z-10">
+        {/* Section Header with Text Reveal Animation */}
         <div className="max-w-2xl text-left space-y-3">
-          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            - ACTIVE PROOFS
-          </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white tracking-tight leading-none">
-            Our Trade Portfolio.
-          </h2>
-          <p className="text-brand-slate text-sm font-medium">
-            Take a look at local contractor websites designed, coded, and optimized by Wattfor.
-          </p>
+          <FadeInUp delay={0.05}>
+            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
+              - ACTIVE PROOFS
+            </span>
+          </FadeInUp>
+          <TextReveal
+            text="Our Trade Portfolio."
+            as="h2"
+            className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white tracking-tight leading-none"
+          />
+          <FadeInUp delay={0.15}>
+            <p className="text-brand-slate text-sm font-medium">
+              Take a look at local contractor websites designed, coded, and optimized by Wattfor.
+            </p>
+          </FadeInUp>
         </div>
 
         {/* Projects Grid — 1 col mobile, 2 col md+ */}
@@ -71,18 +78,20 @@ export default function Portfolio() {
           {projects.map((proj, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-black/30 border border-white/10 p-5 sm:p-6 lg:p-8 rounded-xl flex flex-col justify-between gap-5 hover:border-brand-copper/40 transition-all duration-300 group"
+              transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="bg-black/30 border border-white/10 p-4 xs:p-5 sm:p-6 lg:p-8 rounded-xl flex flex-col justify-between gap-5 hover:border-brand-copper/40 transition-all duration-300 group shadow-md"
             >
-              {/* Image */}
+              {/* Image with Lazy Loading */}
               <div className="bg-brand-navy border border-white/10 rounded-lg overflow-hidden aspect-[16/10] relative shadow-md">
                 <img
                   src={proj.image}
                   alt={proj.title}
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                 />
               </div>
 

@@ -7,6 +7,7 @@ import Button from "../ui/Button";
 import BuildMock from "../mockups/BuildMock";
 import SignalMock from "../mockups/SignalMock";
 import UpkeepMock from "../mockups/UpkeepMock";
+import { TextReveal, FadeInUp } from "../ui/AnimatedText";
 
 interface ServicesProps {
   onCtaClick: () => void;
@@ -51,15 +52,19 @@ export default function Services({ onCtaClick }: ServicesProps) {
       id="services"
       className="relative bg-brand-offwhite overflow-hidden scroll-mt-20 border-b border-brand-navy/10"
     >
-      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24 space-y-16 sm:space-y-24">
-        {/* Section Header */}
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-4 xs:px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24 space-y-16 sm:space-y-24">
+        {/* Section Header with Text Animation */}
         <div className="max-w-2xl text-left space-y-3">
-          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            - SERVICE SPECS
-          </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
-            Engineered to convert clicks into phone calls.
-          </h2>
+          <FadeInUp delay={0.05}>
+            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
+              - SERVICE SPECS
+            </span>
+          </FadeInUp>
+          <TextReveal
+            text="Engineered to convert clicks into phone calls."
+            as="h2"
+            className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none"
+          />
         </div>
 
         {/* Alternating Panels with horizontal boundary lines */}
@@ -70,12 +75,16 @@ export default function Services({ onCtaClick }: ServicesProps) {
             return (
               <div
                 key={panel.id}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center ${
                   idx > 0 ? "pt-16 sm:pt-24" : ""
                 }`}
               >
-                {/* Text Block */}
-                <div
+                {/* Text Block with Scroll Animation */}
+                <motion.div
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
                   className={`lg:col-span-5 space-y-5 sm:space-y-6 ${
                     isEven ? "lg:order-1" : "lg:order-2"
                   }`}
@@ -90,7 +99,7 @@ export default function Services({ onCtaClick }: ServicesProps) {
                     </span>
                   </div>
 
-                  <h3 className="text-4xl sm:text-5xl uppercase font-black text-brand-navy leading-none">
+                  <h3 className="text-3xl xs:text-4xl sm:text-5xl uppercase font-black text-brand-navy leading-none tracking-tight">
                     {panel.headline}
                   </h3>
 
@@ -108,19 +117,19 @@ export default function Services({ onCtaClick }: ServicesProps) {
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </div>
-                </div>
+                </motion.div>
 
-                {/* Visual Mockup Block */}
+                {/* Visual Mockup Block with Scale & Fade */}
                 <div
-                  className={`lg:col-span-7 flex justify-center ${
+                  className={`lg:col-span-7 flex justify-center w-full ${
                     isEven ? "lg:order-2" : "lg:order-1"
                   }`}
                 >
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.98 }}
+                    initial={{ opacity: 0, scale: 0.96 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                     className="w-full max-w-2xl border border-brand-navy/10 shadow-lg rounded-xl overflow-hidden"
                   >
                     {panel.mockup}
