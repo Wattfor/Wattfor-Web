@@ -37,28 +37,34 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
   return (
     <>
       <header
-        className={`fixed z-40 transition-all duration-300 top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl rounded-full ${
+        className={`fixed z-40 transition-all duration-300 top-0 left-0 right-full w-full ${
           isScrolled
-            ? "bg-brand-offwhite/95 border border-brand-navy/10 shadow-xl backdrop-blur-xl py-2 px-5 sm:px-6"
-            : "bg-brand-navy/80 border border-white/20 shadow-2xl backdrop-blur-xl py-2 px-5 sm:px-6"
+            ? "bg-brand-offwhite/95 border-b border-brand-navy/10 shadow-sm backdrop-blur-xl"
+            : "bg-brand-navy/80 border-b border-white/10 backdrop-blur-xl"
         }`}
       >
-        <div className="mx-auto flex justify-between items-center w-full">
+        <div
+          className={`max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 py-3.5 sm:py-4 flex justify-between items-center transition-colors duration-300 ${
+            isScrolled ? "border-x border-brand-navy/10" : "border-x border-white/10"
+          }`}
+        >
           {/* Logo / Wordmark */}
           <a
             href="#"
             className="flex items-center space-x-3 group transition-transform duration-200 hover:scale-[1.02]"
           >
-            <div className="w-10 h-10 rounded-xl bg-white shadow-md border border-white/20 flex items-center justify-center p-1.5 transition-all duration-300 group-hover:shadow-lg flex-shrink-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white shadow-sm border border-white/20 flex items-center justify-center p-1.5 transition-all duration-300 group-hover:shadow-md flex-shrink-0">
               <img
                 src="/wattfor.svg"
                 alt="Wattfor Logo"
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className={`text-2xl lowercase tracking-wider font-extrabold transition-colors duration-300 ${
-              isScrolled ? "text-brand-navy" : "text-white"
-            }`}>
+            <span
+              className={`text-2xl lowercase tracking-wider font-extrabold transition-colors duration-300 ${
+                isScrolled ? "text-brand-navy" : "text-white"
+              }`}
+            >
               wattfor
             </span>
           </a>
@@ -84,13 +90,13 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             {isScrolled ? (
-              <Button onClick={onCtaClick} variant="primary" className="py-2 px-5">
+              <Button onClick={onCtaClick} variant="primary" className="py-2.5 px-6 rounded-lg text-xs">
                 Contact Us
               </Button>
             ) : (
               <button
                 onClick={onCtaClick}
-                className="bg-white text-brand-navy hover:bg-brand-sky text-xs font-bold uppercase tracking-widest py-2.5 px-6 rounded-full shadow-sm transition-colors duration-200"
+                className="bg-white text-brand-navy hover:bg-brand-sky text-xs font-bold uppercase tracking-widest py-2.5 px-6 rounded-lg shadow-sm transition-colors duration-200 cursor-pointer"
               >
                 Contact Us
               </button>
@@ -100,7 +106,7 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2.5 rounded-full transition-colors cursor-pointer ${
+            className={`md:hidden p-2 rounded-lg transition-colors cursor-pointer ${
               isScrolled ? "hover:bg-brand-navy/5 text-brand-navy" : "text-white hover:bg-white/10"
             }`}
           >
@@ -136,7 +142,7 @@ export default function Navigation({ onCtaClick }: NavigationProps) {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center space-x-3.5 hover:opacity-90 transition-opacity"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white shadow-md border border-brand-navy/10 flex items-center justify-center p-2 flex-shrink-0">
+                  <div className="w-11 h-11 rounded-lg bg-white shadow-md border border-brand-navy/10 flex items-center justify-center p-2 flex-shrink-0">
                     <img
                       src="/wattfor.svg"
                       alt="Wattfor Logo"

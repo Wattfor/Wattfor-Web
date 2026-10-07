@@ -25,9 +25,9 @@ export default function BentoFeatures() {
   return (
     <section
       id="specs"
-      className="relative py-16 sm:py-20 lg:py-24 bg-brand-offwhite border-t border-brand-navy/5 scroll-mt-20"
+      className="relative py-16 sm:py-20 lg:py-24 bg-brand-offwhite border-b border-brand-navy/10 scroll-mt-20"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 space-y-10 sm:space-y-12">
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 space-y-10 sm:space-y-12">
         {/* Header */}
         <div className="max-w-xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
@@ -41,7 +41,7 @@ export default function BentoFeatures() {
         {/* Bento Grid — stack on mobile, 3-col on md+ */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {/* Card 1: Checklist */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300">
+          <div className="bg-white p-6 sm:p-8 rounded-xl border border-brand-navy/10 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300">
             <div className="space-y-4">
               <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
                 - COMPONENT LIST
@@ -52,7 +52,7 @@ export default function BentoFeatures() {
               <ul className="space-y-3 pt-1">
                 {checklistItems.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5 text-xs text-brand-slate font-medium">
-                    <div className="w-4 h-4 bg-emerald-500/10 border border-emerald-500/20 rounded-full flex items-center justify-center shrink-0 text-emerald-600 mt-0.5">
+                    <div className="w-4 h-4 bg-emerald-500/10 border border-emerald-500/20 rounded-md flex items-center justify-center shrink-0 text-emerald-600 mt-0.5">
                       <Check className="w-2.5 h-2.5" />
                     </div>
                     <span>{item}</span>
@@ -60,13 +60,13 @@ export default function BentoFeatures() {
                 ))}
               </ul>
             </div>
-            <span className="text-[9px] text-brand-slate uppercase tracking-wider block border-t border-brand-navy/5 pt-4">
+            <span className="text-[9px] text-brand-slate uppercase tracking-wider block border-t border-brand-navy/10 pt-4">
               100% pre-configured on launch
             </span>
           </div>
 
           {/* Card 2: Page Speed */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300">
+          <div className="bg-white p-6 sm:p-8 rounded-xl border border-brand-navy/10 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300">
             <div className="space-y-4">
               <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
                 - ENGINE STATS
@@ -102,14 +102,14 @@ export default function BentoFeatures() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-1.5 text-[9px] text-emerald-500 uppercase font-bold border-t border-brand-navy/5 pt-4">
+            <div className="flex items-center gap-1.5 text-[9px] text-emerald-500 uppercase font-bold border-t border-brand-navy/10 pt-4">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               <span>99.98% Measured Uptime</span>
             </div>
           </div>
 
           {/* Card 3: Ownership — spans 2 cols on sm, 1 on lg */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300 sm:col-span-2 lg:col-span-1">
+          <div className="bg-white p-6 sm:p-8 rounded-xl border border-brand-navy/10 shadow-sm space-y-5 sm:space-y-6 flex flex-col justify-between group hover:border-brand-copper/30 transition-all duration-300 sm:col-span-2 lg:col-span-1">
             <div className="space-y-4">
               <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
                 - COMPLIANCE CODE
@@ -121,11 +121,11 @@ export default function BentoFeatures() {
                 Unlike general agencies who lease you website codes, Wattfor ensures you own your
                 domain names, GBP listings, client data, and final assets under full legal terms.
               </p>
-              <div className="bg-brand-navy/5 p-3.5 border-l-2 border-brand-copper text-[10px] text-brand-slate uppercase tracking-wide leading-relaxed rounded-r-xl">
+              <div className="bg-brand-navy/5 p-3.5 border-l-2 border-brand-copper text-[10px] text-brand-slate uppercase tracking-wide leading-relaxed rounded-r-md">
                 contract segment - section 9: domain and profile assets belong 100% to client.
               </div>
             </div>
-            <div className="flex items-center gap-1.5 text-[9px] text-brand-navy uppercase font-bold border-t border-brand-navy/5 pt-4">
+            <div className="flex items-center gap-1.5 text-[9px] text-brand-navy uppercase font-bold border-t border-brand-navy/10 pt-4">
               <Lock className="w-3.5 h-3.5 text-brand-copper" />
               <span>Full Portability Guaranteed</span>
             </div>

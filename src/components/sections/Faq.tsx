@@ -37,68 +37,67 @@ export default function Faq() {
   return (
     <section
       id="faq"
-      className="relative py-16 sm:py-20 lg:py-24 bg-brand-offwhite border-t border-brand-navy/5 scroll-mt-20"
+      className="relative bg-brand-offwhite border-b border-brand-navy/10 scroll-mt-20"
     >
-      <div className="max-w-4xl mx-auto px-5 sm:px-10 lg:px-16 space-y-12 sm:space-y-16">
-        {/* Section Header */}
-        <div className="text-center sm:text-left space-y-3 max-w-xl">
-          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            - RESOLVING AMBIGUITY
-          </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-brand-slate text-sm font-medium">
-            Everything you need to know about ownership, plans, and flat-rate contracts.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          {/* Left Column — Section Header matching reference photo */}
+          <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
+            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
+              - RESOLVING AMBIGUITY
+            </span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-brand-slate text-sm sm:text-base font-medium leading-relaxed max-w-md">
+              Everything you need to know about domain ownership, trade-specific designs, maintenance plans, and flat-rate contracts.
+            </p>
+          </div>
 
-        {/* Accordions */}
-        <div className="space-y-3 sm:space-y-4">
-          {faqs.map((faq, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-xl sm:rounded-2xl border border-brand-navy/5 shadow-sm overflow-hidden"
-              >
-                <button
-                  onClick={() => handleToggle(idx)}
-                  className="w-full flex justify-between items-center px-5 sm:px-6 py-4 sm:py-5 text-left cursor-pointer select-none gap-4"
-                >
-                  <span className="text-lg sm:text-2xl uppercase tracking-wide font-extrabold text-brand-navy leading-snug">
-                    {faq.q}
-                  </span>
-                  <div
-                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+          {/* Right Column — Horizontal divider rows matching reference photo */}
+          <div className="lg:col-span-7 divide-y divide-brand-navy/10 border-y border-brand-navy/10">
+            {faqs.map((faq, idx) => {
+              const isOpen = openIndex === idx;
+              return (
+                <div key={idx} className="transition-colors">
+                  <button
+                    onClick={() => handleToggle(idx)}
+                    className="w-full flex justify-between items-center py-5 sm:py-6 text-left cursor-pointer select-none gap-4 group"
                   >
-                    {isOpen ? (
-                      <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-copper" />
-                    ) : (
-                      <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    )}
-                  </div>
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                    <span className="text-base sm:text-lg uppercase tracking-wide font-bold text-brand-navy leading-snug group-hover:text-brand-copper transition-colors">
+                      {faq.q}
+                    </span>
+                    <div
+                      className={`w-7 h-7 rounded-md bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 transition-transform duration-300 ${
+                        isOpen ? "rotate-180 bg-brand-copper/10 text-brand-copper" : "group-hover:bg-brand-navy/10"
+                      }`}
                     >
-                      <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-xs sm:text-sm text-brand-slate leading-relaxed font-medium border-t border-brand-navy/5 pt-4">
-                        {faq.a}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
+                      {isOpen ? (
+                        <Minus className="w-3.5 h-3.5 stroke-[2.5]" />
+                      ) : (
+                        <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+                      )}
+                    </div>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                      >
+                        <div className="pb-6 text-xs sm:text-sm text-brand-slate leading-relaxed font-medium">
+                          {faq.a}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

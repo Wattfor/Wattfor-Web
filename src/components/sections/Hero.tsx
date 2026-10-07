@@ -47,9 +47,9 @@ export default function Hero({ onCtaClick }: HeroProps) {
       <div className="absolute inset-0 bg-radial from-transparent via-brand-navy/20 to-brand-navy/75 pointer-events-none z-[1]" />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/60 via-transparent to-brand-navy/80 pointer-events-none z-[1]" />
 
-      {/* Main content — vertically centred and horizontally centered, fills viewport */}
-      <div className="relative z-10 flex-1 flex items-center justify-center w-full px-5 sm:px-10 lg:px-16 pt-24 pb-6 sm:pt-28 sm:pb-8">
-        <div className="max-w-5xl mx-auto w-full flex justify-center">
+      {/* Main content — vertically centred and framed by border-x edge lines */}
+      <div className="relative z-10 flex-1 flex flex-col justify-center w-full max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 pt-28 pb-6 sm:pt-32 sm:pb-8">
+        <div className="w-full flex justify-center">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -59,7 +59,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             {/* Eyebrow Tag */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full"
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1.5 rounded-md"
             >
               <ShieldCheck className="w-3.5 h-3.5 text-brand-sky flex-shrink-0" />
               <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-brand-sky font-bold">
@@ -94,7 +94,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
             >
               <button
                 onClick={onCtaClick}
-                className="flex items-center gap-2 bg-white text-brand-navy hover:bg-brand-sky hover:text-brand-navy px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-sm shadow-md transition-colors duration-200 w-full sm:w-auto justify-center"
+                className="flex items-center gap-2 bg-white text-brand-navy hover:bg-brand-sky hover:text-brand-navy px-7 py-3 sm:py-3.5 rounded-lg font-bold text-sm shadow-md transition-colors duration-200 w-full sm:w-auto justify-center cursor-pointer"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="w-4 h-4" />
@@ -104,24 +104,26 @@ export default function Hero({ onCtaClick }: HeroProps) {
         </div>
       </div>
 
-      {/* Bottom client strip — infinite sliding marquee */}
-      <div className="relative z-10 border-t border-white/10 w-full overflow-hidden py-4 sm:py-5">
-        {/* Fade vignettes */}
-        <div className="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-brand-navy to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-brand-navy to-transparent z-10 pointer-events-none" />
+      {/* Bottom client strip — infinite sliding marquee framed with border lines */}
+      <div className="relative z-10 border-t border-white/10 w-full">
+        <div className="max-w-7xl mx-auto border-x border-white/10 overflow-hidden py-4 sm:py-5 relative">
+          {/* Fade vignettes */}
+          <div className="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-brand-navy to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-brand-navy to-transparent z-10 pointer-events-none" />
 
-        <div className="animate-marquee flex items-center gap-x-10 sm:gap-x-16 opacity-35">
-          {[
-            "Apex Electric", "Summit HVAC", "Vance Plumb", "Croft Roof", "Jenkins Gas",
-            "Apex Electric", "Summit HVAC", "Vance Plumb", "Croft Roof", "Jenkins Gas",
-          ].map((brand, i) => (
-            <span
-              key={i}
-              className="text-base sm:text-xl uppercase tracking-widest font-extrabold text-white whitespace-nowrap"
-            >
-              {brand}
-            </span>
-          ))}
+          <div className="animate-marquee flex items-center gap-x-10 sm:gap-x-16 opacity-35">
+            {[
+              "Apex Electric", "Summit HVAC", "Vance Plumb", "Croft Roof", "Jenkins Gas",
+              "Apex Electric", "Summit HVAC", "Vance Plumb", "Croft Roof", "Jenkins Gas",
+            ].map((brand, i) => (
+              <span
+                key={i}
+                className="text-base sm:text-xl uppercase tracking-widest font-extrabold text-white whitespace-nowrap"
+              >
+                {brand}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -47,12 +47,12 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="relative py-16 sm:py-20 lg:py-24 bg-brand-navy text-white overflow-hidden scroll-mt-20"
+      className="relative bg-brand-navy text-white overflow-hidden scroll-mt-20 border-b border-white/10"
     >
       {/* Subtle radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,114,44,0.06),transparent_70%)]" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 space-y-12 sm:space-y-16 relative z-10">
+      <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24 space-y-12 sm:space-y-16 relative z-10">
         {/* Section Header */}
         <div className="max-w-2xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
@@ -75,10 +75,10 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-black/30 border border-white/5 p-5 sm:p-6 lg:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-between gap-5 hover:border-brand-copper/30 transition-all duration-300 group"
+              className="bg-black/30 border border-white/10 p-5 sm:p-6 lg:p-8 rounded-xl flex flex-col justify-between gap-5 hover:border-brand-copper/40 transition-all duration-300 group"
             >
               {/* Image */}
-              <div className="bg-brand-navy border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] relative shadow-md">
+              <div className="bg-brand-navy border border-white/10 rounded-lg overflow-hidden aspect-[16/10] relative shadow-md">
                 <img
                   src={proj.image}
                   alt={proj.title}
@@ -98,7 +98,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Metric Callout */}
-                <div className="bg-white/5 border border-white/5 p-3 sm:p-4 rounded-xl space-y-1">
+                <div className="bg-white/5 border border-white/10 p-3 sm:p-4 rounded-lg space-y-1">
                   <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
                     <CheckCircle className="w-3.5 h-3.5 flex-shrink-0" />
                     <span>METRIC ACHIEVED: {proj.metric}</span>

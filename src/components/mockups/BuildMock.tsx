@@ -33,7 +33,7 @@ export default function BuildMock() {
   ];
 
   return (
-    <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden p-4 sm:p-7 flex items-center justify-center shadow-xl border border-brand-navy/10 select-none">
+    <div className="relative w-full rounded-xl overflow-hidden p-4 sm:p-7 flex items-center justify-center shadow-md border border-brand-navy/10 select-none">
       {/* Animated photo in the background */}
       <motion.img
         src="/images/service-bg-1.jpg"
@@ -54,10 +54,10 @@ export default function BuildMock() {
       {/* Atmospheric gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/20 via-transparent to-white/10 pointer-events-none" />
 
-      {/* Foreground Floating Card inspired by user reference */}
-      <div className="relative z-10 w-full max-w-md bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl p-5 sm:p-6 shadow-2xl border border-white/80">
+      {/* Foreground Floating Card with reduced border radius */}
+      <div className="relative z-10 w-full max-w-md bg-white/95 backdrop-blur-md rounded-xl p-5 sm:p-6 shadow-xl border border-brand-navy/10">
         {/* Undraw Website Visitors SVG Illustration */}
-        <div className="w-full bg-brand-offwhite/50 rounded-xl sm:rounded-2xl p-3 sm:p-4 mb-4 flex items-center justify-center border border-brand-navy/5 shadow-inner">
+        <div className="w-full bg-brand-offwhite/50 rounded-lg p-3 sm:p-4 mb-4 flex items-center justify-center border border-brand-navy/10 shadow-inner">
           <img
             src="/undraw_website-visitors_qy9c.svg"
             alt="Website Visitors"
@@ -65,8 +65,8 @@ export default function BuildMock() {
           />
         </div>
 
-        {/* Feature Status Rows */}
-        <div className="space-y-3 divide-y divide-gray-100">
+        {/* Feature Status Rows with clean divider lines */}
+        <div className="space-y-3 divide-y divide-brand-navy/10">
           {items.map((item, idx) => (
             <div
               key={idx}
@@ -83,12 +83,12 @@ export default function BuildMock() {
 
               <div className="shrink-0">
                 {item.status === "success" ? (
-                  <span className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
+                  <span className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
                     <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
                     <span>{item.badge}</span>
                   </span>
                 ) : (
-                  <span className="bg-amber-500/10 text-amber-600 border border-amber-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
+                  <span className="bg-amber-500/10 text-amber-600 border border-amber-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
                     <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5] animate-spin" />
                     <span>{item.badge}</span>
                   </span>

@@ -90,9 +90,9 @@ export default function Pricing({ onCtaClick }: PricingProps) {
   return (
     <section
       id="pricing"
-      className="relative py-16 sm:py-20 lg:py-24 bg-brand-offwhite border-t border-brand-navy/5 scroll-mt-20"
+      className="relative bg-brand-offwhite border-b border-brand-navy/10 scroll-mt-20"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 space-y-12 sm:space-y-16">
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24 space-y-12 sm:space-y-16">
         {/* Section Header */}
         <div className="max-w-3xl text-left space-y-4">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
@@ -113,14 +113,14 @@ export default function Pricing({ onCtaClick }: PricingProps) {
           {mainPlans.map((plan, idx) => (
             <div
               key={idx}
-              className={`p-6 sm:p-8 rounded-[2rem] flex flex-col justify-between gap-8 relative overflow-hidden transition-all duration-300 hover:scale-[1.01] bg-brand-navy text-white shadow-xl ${
+              className={`p-6 sm:p-8 rounded-xl flex flex-col justify-between gap-8 relative overflow-hidden transition-all duration-300 hover:scale-[1.01] bg-brand-navy text-white shadow-xl ${
                 plan.featured
-                  ? "border border-brand-copper/45 ring-1 ring-brand-copper/30 sm:col-span-2 lg:col-span-1"
-                  : "border border-white/5"
+                  ? "border border-brand-copper/50 ring-1 ring-brand-copper/30 sm:col-span-2 lg:col-span-1"
+                  : "border border-white/10"
               }`}
             >
               {plan.popular && (
-                <div className="absolute top-5 right-5 sm:top-6 sm:right-6 bg-brand-copper text-white text-[9px] uppercase tracking-widest px-3 py-1 font-bold rounded-full">
+                <div className="absolute top-5 right-5 sm:top-6 sm:right-6 bg-brand-copper text-white text-[9px] uppercase tracking-widest px-3 py-1 font-bold rounded-md">
                   Popular
                 </div>
               )}
@@ -137,7 +137,7 @@ export default function Pricing({ onCtaClick }: PricingProps) {
                 </div>
 
                 {/* Price Display */}
-                <div className="py-4 border-y border-white/5 space-y-1">
+                <div className="py-4 border-y border-white/10 space-y-1">
                   <div className="flex items-baseline flex-wrap gap-x-1">
                     <span className="text-4xl sm:text-5xl font-black text-white leading-none">
                       {plan.price}
@@ -164,7 +164,7 @@ export default function Pricing({ onCtaClick }: PricingProps) {
                             key={iidx}
                             className="flex items-start gap-2.5 text-xs text-white/90 font-medium"
                           >
-                            <div className="w-4 h-4 bg-brand-copper/10 border border-brand-copper/25 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-brand-copper">
+                            <div className="w-4 h-4 bg-brand-copper/10 border border-brand-copper/25 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5 text-brand-copper">
                               <Check className="w-2.5 h-2.5" />
                             </div>
                             <span>{item}</span>
@@ -180,7 +180,7 @@ export default function Pricing({ onCtaClick }: PricingProps) {
               <div>
                 <button
                   onClick={onCtaClick}
-                  className={`w-full py-3.5 px-6 rounded-full text-[11px] uppercase tracking-widest font-bold transition-all duration-200 cursor-pointer text-center ${
+                  className={`w-full py-3.5 px-6 rounded-lg text-[11px] uppercase tracking-widest font-bold transition-all duration-200 cursor-pointer text-center ${
                     plan.featured
                       ? "bg-brand-copper text-white hover:bg-brand-copper-hover"
                       : "bg-white text-brand-navy hover:bg-brand-offwhite"
@@ -194,7 +194,7 @@ export default function Pricing({ onCtaClick }: PricingProps) {
         </div>
 
         {/* Standalone Hosting Callout */}
-        <div className="bg-white border border-brand-navy/5 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-6 group hover:border-brand-copper/30 transition-all duration-300">
+        <div className="bg-white border border-brand-navy/10 p-5 sm:p-8 rounded-xl shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-6 group hover:border-brand-copper/30 transition-all duration-300">
           <div className="space-y-2 text-left">
             <span className="text-[9px] text-brand-copper uppercase tracking-widest font-bold block">
               - STANDALONE UPKEEP SUPPORT
@@ -210,7 +210,7 @@ export default function Pricing({ onCtaClick }: PricingProps) {
           <div className="flex-shrink-0 w-full sm:w-auto">
             <button
               onClick={onCtaClick}
-              className="w-full sm:w-auto py-3 px-6 rounded-full border border-brand-navy bg-transparent text-brand-navy hover:bg-brand-navy hover:text-white text-[10px] uppercase tracking-widest font-bold transition-all duration-200 cursor-pointer"
+              className="w-full sm:w-auto py-3 px-6 rounded-lg border border-brand-navy bg-transparent text-brand-navy hover:bg-brand-navy hover:text-white text-[10px] uppercase tracking-widest font-bold transition-all duration-200 cursor-pointer"
             >
               Secure Hosting Only
             </button>

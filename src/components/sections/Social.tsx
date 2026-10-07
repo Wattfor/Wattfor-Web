@@ -58,10 +58,10 @@ export default function Social() {
   return (
     <section
       id="reviews"
-      className="relative py-16 sm:py-20 lg:py-24 bg-brand-offwhite border-t border-brand-navy/5 overflow-hidden scroll-mt-20"
+      className="relative bg-brand-offwhite border-b border-brand-navy/10 overflow-hidden scroll-mt-20"
     >
-      {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 mb-10 sm:mb-14">
+      {/* Section Header framed with border-x edge lines */}
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
         <div className="max-w-2xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             - CLIENT FEEDBACK
@@ -76,8 +76,8 @@ export default function Social() {
         </div>
       </div>
 
-      {/* Scrolling Marquee */}
-      <div className="relative w-full overflow-hidden flex py-2">
+      {/* Scrolling Marquee framed with horizontal border lines */}
+      <div className="relative w-full overflow-hidden flex py-6 border-y border-brand-navy/10 bg-brand-offwhite/50">
         {/* Fade vignettes */}
         <div className="absolute top-0 bottom-0 left-0 w-12 sm:w-20 bg-gradient-to-r from-brand-offwhite to-transparent z-10 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-12 sm:w-20 bg-gradient-to-l from-brand-offwhite to-transparent z-10 pointer-events-none" />
@@ -86,7 +86,7 @@ export default function Social() {
           {marqueeList.map((test, i) => (
             <div
               key={i}
-              className="w-[280px] sm:w-[320px] lg:w-[360px] bg-white p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-brand-navy/5 shadow-sm flex flex-col justify-between gap-5 flex-shrink-0 select-none"
+              className="w-[280px] sm:w-[320px] lg:w-[360px] bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-brand-navy/10 shadow-sm flex flex-col justify-between gap-5 flex-shrink-0 select-none"
             >
               <div className="space-y-3 sm:space-y-4 text-left">
                 {/* Stars */}
@@ -102,9 +102,9 @@ export default function Social() {
               </div>
 
               {/* Author */}
-              <div className="flex justify-between items-end border-t border-brand-navy/5 pt-4">
+              <div className="flex justify-between items-end border-t border-brand-navy/10 pt-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-brand-navy/10 overflow-hidden bg-brand-navy flex-shrink-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg border border-brand-navy/10 overflow-hidden bg-brand-navy flex-shrink-0">
                     <img
                       src={test.image}
                       alt={test.name}

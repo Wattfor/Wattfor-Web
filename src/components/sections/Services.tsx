@@ -49,9 +49,9 @@ export default function Services({ onCtaClick }: ServicesProps) {
   return (
     <section
       id="services"
-      className="relative py-16 sm:py-20 lg:py-24 bg-brand-offwhite overflow-hidden scroll-mt-20"
+      className="relative bg-brand-offwhite overflow-hidden scroll-mt-20 border-b border-brand-navy/10"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 space-y-20 sm:space-y-28 lg:space-y-36">
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24 space-y-16 sm:space-y-24">
         {/* Section Header */}
         <div className="max-w-2xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
@@ -62,15 +62,17 @@ export default function Services({ onCtaClick }: ServicesProps) {
           </h2>
         </div>
 
-        {/* Alternating Panels */}
-        <div className="space-y-20 sm:space-y-28 lg:space-y-32">
+        {/* Alternating Panels with horizontal boundary lines */}
+        <div className="space-y-16 sm:space-y-24 divide-y divide-brand-navy/10">
           {panels.map((panel, idx) => {
             const isEven = idx % 2 === 0;
 
             return (
               <div
                 key={panel.id}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center"
+                className={`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center ${
+                  idx > 0 ? "pt-16 sm:pt-24" : ""
+                }`}
               >
                 {/* Text Block */}
                 <div
@@ -80,7 +82,7 @@ export default function Services({ onCtaClick }: ServicesProps) {
                 >
                   {/* Step ID Card */}
                   <div className="flex items-center gap-3 flex-wrap">
-                    <span className="text-xs text-brand-copper font-bold border border-brand-copper/30 px-3 py-1 bg-brand-copper/5 rounded-full select-none">
+                    <span className="text-xs text-brand-copper font-bold border border-brand-copper/30 px-3 py-1 bg-brand-copper/5 rounded-md select-none">
                       {panel.id}
                     </span>
                     <span className="text-[10px] text-brand-slate uppercase tracking-widest font-bold">
@@ -119,7 +121,7 @@ export default function Services({ onCtaClick }: ServicesProps) {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="w-full max-w-2xl border border-brand-navy/5 shadow-lg rounded-[1.5rem] overflow-hidden"
+                    className="w-full max-w-2xl border border-brand-navy/10 shadow-lg rounded-xl overflow-hidden"
                   >
                     {panel.mockup}
                   </motion.div>

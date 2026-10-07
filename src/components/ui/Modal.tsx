@@ -103,13 +103,13 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: "spring", duration: 0.4 }}
-            className="relative w-full max-w-xl bg-brand-offwhite border border-brand-navy/10 overflow-hidden shadow-2xl z-10 rounded-[2rem]"
+            className="relative w-full max-w-xl bg-brand-offwhite border border-brand-navy/10 overflow-hidden shadow-2xl z-10 rounded-xl"
           >
             {/* Top Close Bar */}
             <div className="flex justify-end p-6">
               <button
                 onClick={resetForm}
-                className="p-2 rounded-full hover:bg-brand-navy/5 text-brand-slate hover:text-brand-navy transition-colors cursor-pointer"
+                className="p-2 rounded-md hover:bg-brand-navy/5 text-brand-slate hover:text-brand-navy transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -129,12 +129,12 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                   </div>
                   <div className="flex space-x-2">
                     <span
-                      className={`w-8 h-1 rounded-full transition-all duration-300 ${
+                      className={`w-8 h-1 rounded-sm transition-all duration-300 ${
                         step >= 1 ? "bg-brand-copper" : "bg-brand-navy/10"
                       }`}
                     />
                     <span
-                      className={`w-8 h-1 rounded-full transition-all duration-300 ${
+                      className={`w-8 h-1 rounded-sm transition-all duration-300 ${
                         step >= 2 ? "bg-brand-copper" : "bg-brand-navy/10"
                       }`}
                     />
@@ -160,7 +160,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                       value={formData.businessName}
                       onChange={handleInputChange}
                       placeholder="e.g. Apex Electrical Services"
-                      className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
+                      className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-lg text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
                       required
                     />
                   </div>
@@ -178,13 +178,13 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                             key={trade.name}
                             type="button"
                             onClick={() => handleTradeSelect(trade.name)}
-                            className={`flex items-center space-x-3 p-4 border text-left cursor-pointer transition-all duration-150 rounded-2xl ${
+                            className={`flex items-center space-x-3 p-4 border text-left cursor-pointer transition-all duration-150 rounded-lg ${
                               isSelected
                                 ? "bg-white border-brand-copper ring-2 ring-brand-copper/25 font-bold text-brand-navy"
                                 : "bg-white/50 border-brand-navy/10 text-brand-slate hover:bg-white hover:border-brand-navy/30"
                             }`}
                           >
-                            <div className={`p-2 rounded-xl ${trade.color}`}>
+                            <div className={`p-2 rounded-md ${trade.color}`}>
                               <Icon className="w-4 h-4" />
                             </div>
                             <span className="text-sm font-semibold">{trade.name}</span>
@@ -227,7 +227,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                           value={formData.ownerName}
                           onChange={handleInputChange}
                           placeholder="e.g. John Doe"
-                          className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
+                          className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-lg text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
                           required
                         />
                       </div>
@@ -241,7 +241,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                           value={formData.phone}
                           onChange={handleInputChange}
                           placeholder="e.g. (555) 123-4567"
-                          className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
+                          className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-lg text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
                           required
                         />
                       </div>
@@ -257,12 +257,12 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="e.g. john@apexelectrical.com"
-                        className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-xl text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
+                        className="w-full bg-white border border-brand-navy/10 py-3.5 px-5 rounded-lg text-brand-navy focus:outline-none focus:border-brand-copper transition-colors text-sm shadow-sm"
                         required
                       />
                     </div>
 
-                    <div className="bg-brand-navy/5 p-5 border-l-2 border-brand-copper text-brand-slate text-xs space-y-1.5 rounded-r-2xl">
+                    <div className="bg-brand-navy/5 p-5 border-l-2 border-brand-copper text-brand-slate text-xs space-y-1.5 rounded-r-md">
                       <p className="font-bold text-brand-navy uppercase tracking-wider">What happens next?</p>
                       <p className="leading-relaxed">
                         We will review your trade profile and contact you within 24 hours to schedule a 10-minute discovery call to scope your site build and search dashboard.
@@ -308,8 +308,8 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-8 space-y-6"
                 >
-                  <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-brand-copper/10 border border-brand-copper/25 text-brand-copper">
-                    <CheckCircle className="w-8 h-8" />
+                  <div className="inline-flex justify-center items-center w-14 h-14 rounded-lg bg-brand-copper/10 border border-brand-copper/25 text-brand-copper">
+                    <CheckCircle className="w-7 h-7" />
                   </div>
 
                   <div className="space-y-2">
@@ -325,7 +325,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                   </div>
 
                   {/* Faux technical read-out */}
-                  <div className="bg-brand-navy text-brand-offwhite text-left text-xs p-5 rounded-2xl space-y-1 max-w-md mx-auto border border-white/5 opacity-90 select-none shadow-md">
+                  <div className="bg-brand-navy text-brand-offwhite text-left text-xs p-5 rounded-lg space-y-1 max-w-md mx-auto border border-white/5 opacity-90 select-none shadow-md">
                     <p className="text-brand-copper font-bold">⚡ TERMINAL STATUS: OK</p>
                     <p className="text-white/40">- DISPATCH INITIATED FOR: {formData.tradeType}</p>
                     <p className="text-emerald-400">&gt; routing pipeline... complete</p>

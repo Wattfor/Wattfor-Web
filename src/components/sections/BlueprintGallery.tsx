@@ -98,8 +98,8 @@ export default function BlueprintGallery() {
   ];
 
   return (
-    <section id="blueprints" className="relative py-12 sm:py-16 bg-brand-offwhite scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6 space-y-16">
+    <section id="blueprints" className="relative bg-brand-offwhite border-b border-brand-navy/10 scroll-mt-24">
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 space-y-12 sm:space-y-16">
         {/* Header */}
         <div className="max-w-xl text-left space-y-4">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
@@ -122,9 +122,9 @@ export default function BlueprintGallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="bg-white p-6 rounded-3xl border border-brand-navy/5 shadow-sm space-y-4 group hover:border-brand-copper/30 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white p-6 rounded-xl border border-brand-navy/10 shadow-sm space-y-4 group hover:border-brand-copper/30 transition-all duration-300 flex flex-col justify-between"
             >
-              <div className="bg-brand-offwhite/50 border border-brand-navy/5 rounded-2xl p-4 flex items-center justify-center relative overflow-hidden">
+              <div className="bg-brand-offwhite/50 border border-brand-navy/10 rounded-lg p-4 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#152238_1px,transparent_1px)] [background-size:16px_16px]" />
                 {bp.icon}
               </div>
