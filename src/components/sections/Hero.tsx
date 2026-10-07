@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import dynamic from "next/dynamic";
 
@@ -120,58 +120,72 @@ export default function Hero({ onCtaClick }: HeroProps) {
       <div className="absolute inset-0 bg-radial from-transparent via-brand-navy/20 to-brand-navy/75 pointer-events-none z-[1]" />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/60 via-transparent to-brand-navy/80 pointer-events-none z-[1]" />
 
-      {/* Main content — vertically centred and framed by border-x edge lines */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center w-full max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 pt-28 pb-10 sm:pt-32 sm:pb-12">
+      {/* Subtle dotted matrix overlay matching reference layout */}
+      <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none z-[2] opacity-60" />
+
+      {/* Main content — vertically balanced with generous breathing room and framed by border-x edge lines */}
+      <div className="relative z-10 flex-1 flex flex-col justify-center w-full max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 pt-36 pb-16 sm:pt-40 sm:pb-20 lg:pt-44 lg:pb-24">
         <div className="w-full flex justify-center">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-3xl mx-auto flex flex-col items-center text-center space-y-5 sm:space-y-6"
+            className="max-w-4xl mx-auto flex flex-col items-center text-center"
           >
-            {/* Eyebrow Tag */}
+            {/* Eyebrow Pill Badge matching reference layout */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1.5 rounded-md"
+              className="inline-flex items-center gap-2.5 bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 pl-1.5 pr-4 py-1.5 rounded-full backdrop-blur-md transition-all duration-200 shadow-sm mb-7 sm:mb-9 cursor-default"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-brand-sky flex-shrink-0" />
-              <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-brand-sky font-bold">
+              <span className="bg-white text-brand-navy font-bold text-[10px] sm:text-[11px] px-2.5 py-0.5 rounded-full shadow-sm uppercase tracking-wider">
+                Trades
+              </span>
+              <span className="text-white/85 text-xs sm:text-sm font-medium">
                 Websites &amp; Local SEO for Trade Contractors
               </span>
             </motion.div>
 
-            {/* Headline */}
-            <motion.h1 variants={itemVariants} className="tracking-tight leading-none text-white text-center">
-              <span className="font-normal text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-brand-sky block normal-case mb-1 sm:mb-2">
+            {/* Headline with reduced typography size and airy line-height */}
+            <motion.h1
+              variants={itemVariants}
+              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white text-center leading-[1.14] mb-5 sm:mb-7 max-w-3xl"
+            >
+              <span className="block text-white/95">
                 wired for trades.
               </span>
-              <span className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase font-black block">
+              <span className="block text-white mt-1">
                 Built for Search.
               </span>
             </motion.h1>
 
-            {/* Description */}
+            {/* Description — relaxed width and line height */}
             <motion.p
               variants={itemVariants}
-              className="text-white/70 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-medium text-center"
+              className="text-white/70 text-sm sm:text-base md:text-lg max-w-xl mx-auto leading-relaxed font-normal text-center mb-8 sm:mb-10"
             >
               We build high-speed websites and manage local search visibility for electricians,
               plumbers, HVAC, and roofers — so the next job goes to your crew, not whoever ranks
               first on Google.
             </motion.p>
 
-            {/* CTA Row */}
+            {/* CTA Buttons Row matching reference layout */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-1 w-full"
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto"
             >
               <button
                 onClick={onCtaClick}
-                className="flex items-center gap-2 bg-white text-brand-navy hover:bg-brand-sky hover:text-brand-navy px-7 py-3 sm:py-3.5 rounded-lg font-bold text-sm shadow-md transition-colors duration-200 w-full sm:w-auto justify-center cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 bg-white text-brand-navy hover:bg-brand-sky hover:text-brand-navy px-7 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200 w-full sm:w-auto cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center px-7 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white/10 hover:bg-white/15 text-white border border-white/15 font-semibold text-sm transition-all duration-200 backdrop-blur-sm w-full sm:w-auto cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <span>Learn More</span>
+              </a>
             </motion.div>
           </motion.div>
         </div>
