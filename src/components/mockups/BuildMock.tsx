@@ -1,96 +1,101 @@
 "use client";
 
 import React from "react";
-import { Star, Shield, Phone, Cpu, Settings, Code } from "lucide-react";
+import { motion } from "framer-motion";
+import { Check, Clock } from "lucide-react";
 
 export default function BuildMock() {
+  const items = [
+    {
+      title: "High-Speed Mobile Core",
+      subtitle: "Google PageSpeed 99+ score",
+      badge: "Learned",
+      status: "success",
+    },
+    {
+      title: "Trade Booking System",
+      subtitle: "Instant lead & SMS dispatch",
+      badge: "Learned",
+      status: "success",
+    },
+    {
+      title: "Google Review Feed",
+      subtitle: "Live verified rating sync",
+      badge: "Learned",
+      status: "success",
+    },
+    {
+      title: "Custom Domain & SSL",
+      subtitle: "DNS propagation active",
+      badge: "Syncing...",
+      status: "pending",
+    },
+  ];
+
   return (
-    <div className="w-full bg-[#152238] border border-white/10 rounded-2xl overflow-hidden shadow-2xl relative select-none">
-      {/* Code Editor Header */}
-      <div className="bg-black/35 px-4 py-3 flex items-center justify-between border-b border-white/5">
-        <div className="flex space-x-1.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-          <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-          <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-        </div>
-        <span className="text-[10px] text-white/50 tracking-wider flex items-center space-x-1.5">
-          <Code className="w-3.5 h-3.5 text-brand-copper" />
-          <span>apex-builder.config.json</span>
-        </span>
-        <Settings className="w-3.5 h-3.5 text-white/30" />
-      </div>
+    <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden p-4 sm:p-7 flex items-center justify-center shadow-xl border border-brand-navy/10 select-none">
+      {/* Animated photo in the background */}
+      <motion.img
+        src="/images/service-bg-1.jpg"
+        alt="Animated Background"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none scale-105"
+        animate={{
+          scale: [1.02, 1.1, 1.02],
+          x: [0, 10, -8, 0],
+          y: [0, -8, 8, 0],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
 
-      {/* Editor Content Area */}
-      <div className="p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
-        
-        {/* Left Column: Config JSON */}
-        <div className="md:col-span-6 space-y-3 text-[10px] text-left text-white/60">
-          <div className="text-brand-copper font-bold">- INITIALIZE SITE DEPLOY</div>
-          <div>
-            <span className="text-white/40">1 </span>
-            <span className="text-emerald-400">"siteName"</span>: <span className="text-brand-copper">"Apex Electrical"</span>,
-          </div>
-          <div>
-            <span className="text-white/40">2 </span>
-            <span className="text-emerald-400">"industry"</span>: <span className="text-brand-copper">"Electrician Crew"</span>,
-          </div>
-          <div>
-            <span className="text-white/40">3 </span>
-            <span className="text-emerald-400">"status"</span>: <span className="text-brand-copper">"LIVE_PRODUCTION"</span>,
-          </div>
-          <div>
-            <span className="text-white/40">4 </span>
-            <span className="text-emerald-400">"pageSpeed"</span>: <span className="text-emerald-400">99</span>,
-          </div>
-          <div>
-            <span className="text-white/40">5 </span>
-            <span className="text-emerald-400">"sslCert"</span>: <span className="text-emerald-400">true</span>,
-          </div>
-          <div>
-            <span className="text-white/40">6 </span>
-            <span className="text-emerald-400">"features"</span>: [
-          </div>
-          <div className="pl-4">
-            <span className="text-white/40">7 </span><span className="text-brand-copper">"Google Reviews Feed"</span>,
-          </div>
-          <div className="pl-4">
-            <span className="text-white/40">8 </span><span className="text-brand-copper">"Click-To-Call Dialers"</span>,
-          </div>
-          <div className="pl-4">
-            <span className="text-white/40">9 </span><span className="text-brand-copper">"Lead Booking Terminal"</span>
-          </div>
-          <div>
-            <span className="text-white/40">10 </span>]
-          </div>
+      {/* Atmospheric gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/20 via-transparent to-white/10 pointer-events-none" />
+
+      {/* Foreground Floating Card inspired by user reference */}
+      <div className="relative z-10 w-full max-w-md bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl p-5 sm:p-6 shadow-2xl border border-white/80">
+        {/* Undraw Website Visitors SVG Illustration */}
+        <div className="w-full bg-brand-offwhite/50 rounded-xl sm:rounded-2xl p-3 sm:p-4 mb-4 flex items-center justify-center border border-brand-navy/5 shadow-inner">
+          <img
+            src="/undraw_website-visitors_qy9c.svg"
+            alt="Website Visitors"
+            className="h-28 sm:h-36 w-auto object-contain transition-transform duration-300 hover:scale-105"
+          />
         </div>
 
-        {/* Right Column: Visual Layout Render Mock */}
-        <div className="md:col-span-6 bg-black/40 border border-white/5 rounded-xl p-4 flex flex-col justify-between space-y-4">
-          <div className="flex justify-between items-center pb-2 border-b border-white/5">
-            <span className="text-[9px] text-white/40 ">LIVE PREVIEW</span>
-            <span className="text-[8px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-bold uppercase">
-              Secure SSL
-            </span>
-          </div>
+        {/* Feature Status Rows */}
+        <div className="space-y-3 divide-y divide-gray-100">
+          {items.map((item, idx) => (
+            <div
+              key={idx}
+              className={`flex items-center justify-between gap-3 ${idx > 0 ? "pt-3" : ""}`}
+            >
+              <div>
+                <h4 className="text-brand-navy font-bold text-xs sm:text-sm leading-tight">
+                  {item.title}
+                </h4>
+                <p className="text-brand-slate text-[11px] sm:text-xs mt-0.5 font-medium">
+                  {item.subtitle}
+                </p>
+              </div>
 
-          <div className="space-y-2 text-left">
-            <div className="flex items-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-2.5 h-2.5 fill-brand-copper text-brand-copper" />
-              ))}
-              <span className="text-[8px] text-white/50">(48 Reviews)</span>
+              <div className="shrink-0">
+                {item.status === "success" ? (
+                  <span className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
+                    <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
+                    <span>{item.badge}</span>
+                  </span>
+                ) : (
+                  <span className="bg-amber-500/10 text-amber-600 border border-amber-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
+                    <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5] animate-spin" />
+                    <span>{item.badge}</span>
+                  </span>
+                )}
+              </div>
             </div>
-            <h4 className="text-lg font-black uppercase tracking-wider text-white leading-none">
-              Apex Electrical
-            </h4>
-            <p className="text-[9px] text-white/60 leading-relaxed ">
-              24/7 emergency panel upgrades & residential troubleshooting.
-            </p>
-          </div>
-
-          <div className="bg-brand-copper text-white py-1.5 rounded-lg text-center text-[9px] font-bold tracking-widest uppercase">
-            CALL DISPATCH
-          </div>
+          ))}
         </div>
       </div>
     </div>

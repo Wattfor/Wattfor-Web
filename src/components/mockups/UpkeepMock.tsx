@@ -1,90 +1,102 @@
 "use client";
 
 import React from "react";
-import { Shield, RefreshCcw, Cpu, Server, Check } from "lucide-react";
+import { motion } from "framer-motion";
+import { Check, Clock } from "lucide-react";
 
 export default function UpkeepMock() {
+  const items = [
+    {
+      title: "Automated Cloud Backups",
+      subtitle: "Daily snapshots & encrypted vault",
+      badge: "Learned",
+      status: "success",
+    },
+    {
+      title: "24/7 Uptime Monitoring",
+      subtitle: "99.98% SLA server response",
+      badge: "Learned",
+      status: "success",
+    },
+    {
+      title: "Core Security Defense",
+      subtitle: "Active firewall & patch protection",
+      badge: "Learned",
+      status: "success",
+    },
+    {
+      title: "Crew Content & Updates",
+      subtitle: "Menu, staff & project photo sync",
+      badge: "Syncing...",
+      status: "pending",
+    },
+  ];
+
   return (
-    <div className="w-full bg-[#152238] border border-white/10 rounded-2xl overflow-hidden shadow-2xl relative select-none">
-      {/* Header Bar */}
-      <div className="bg-black/35 px-4 py-3 flex items-center justify-between border-b border-white/5">
-        <div className="flex space-x-1.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-          <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-          <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-        </div>
-        <span className="text-[10px] text-white/50 tracking-wider flex items-center space-x-1.5">
-          <Server className="w-3.5 h-3.5 text-brand-copper" />
-          <span>cloud-uptime-diagnostics.log</span>
-        </span>
-        <RefreshCcw className="w-3.5 h-3.5 text-white/30" />
-      </div>
+    <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden p-4 sm:p-7 flex items-center justify-center shadow-xl border border-brand-navy/10 select-none">
+      {/* Animated photo in the background */}
+      <motion.img
+        src="/images/service-bg-3.jpg"
+        alt="Animated Background"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none scale-105"
+        animate={{
+          scale: [1.02, 1.1, 1.02],
+          x: [0, 8, -10, 0],
+          y: [0, -6, 6, 0],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
 
-      {/* Stats Display Grid */}
-      <div className="p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
-        
-        {/* Left Column: Performance Logs */}
-        <div className="md:col-span-7 bg-black/40 border border-white/5 rounded-xl p-4 flex flex-col justify-between space-y-4 text-left">
-          <div className="flex justify-between items-center">
-            <span className="text-[9px] text-white/40">SYSTEM HEALTH STATUS</span>
-            <span className="text-[8px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-bold">
-              ACTIVE
-            </span>
-          </div>
+      {/* Atmospheric gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/20 via-transparent to-white/10 pointer-events-none" />
 
-          <div className="space-y-2 text-[9px] text-white/60">
-            <div>
-              <span className="text-white/40">[10:04:11]</span> HOST: cloudflare-secure-edge-dn
-            </div>
-            <div>
-              <span className="text-white/40">[10:04:12]</span> SSL CERT: Verified (Expires 365d)
-            </div>
-            <div>
-              <span className="text-white/40">[10:04:12]</span> LATENCY: <span className="text-emerald-400">12ms</span> (RTT optimized)
-            </div>
-            <div>
-              <span className="text-white/40">[10:04:13]</span> DATABASE: Backups generated successfully
-            </div>
-            <div className="text-emerald-400 flex items-center space-x-1">
-              <Check className="w-3 h-3 shrink-0" />
-              <span>[10:04:14] UPTIME MONITOR: 100% (No shifts measured)</span>
-            </div>
-          </div>
-
-          <div className="w-full bg-white/5 rounded h-3 overflow-hidden flex">
-            <div className="w-3/4 bg-brand-copper h-full" />
-            <div className="w-1/4 bg-emerald-500 h-full" />
-          </div>
+      {/* Foreground Floating Card inspired by user reference */}
+      <div className="relative z-10 w-full max-w-md bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl p-5 sm:p-6 shadow-2xl border border-white/80">
+        {/* Undraw Maintenance SVG Illustration */}
+        <div className="w-full bg-brand-offwhite/50 rounded-xl sm:rounded-2xl p-3 sm:p-4 mb-4 flex items-center justify-center border border-brand-navy/5 shadow-inner">
+          <img
+            src="/undraw_maintenance_4unj.svg"
+            alt="Maintenance"
+            className="h-28 sm:h-36 w-auto object-contain transition-transform duration-300 hover:scale-105"
+          />
         </div>
 
-        {/* Right Column: Security Config */}
-        <div className="md:col-span-5 flex flex-col justify-between space-y-4 text-left">
-          
-          <div className="space-y-3">
-            <div className="text-brand-copper text-[10px] font-bold uppercase tracking-wider">- PLATFORM SECURE</div>
-            <div className="space-y-1">
-              <span className="text-[9px] text-white/40 block">UPTIME METRIC</span>
-              <span className="text-2xl font-black text-white uppercase tracking-wider">99.98%</span>
-            </div>
-            <div className="space-y-1">
-              <span className="text-[9px] text-white/40 block">BACKUP SYNC</span>
-              <span className="text-2xl font-black text-white uppercase tracking-wider">DAILY</span>
-            </div>
-          </div>
+        {/* Feature Status Rows */}
+        <div className="space-y-3 divide-y divide-gray-100">
+          {items.map((item, idx) => (
+            <div
+              key={idx}
+              className={`flex items-center justify-between gap-3 ${idx > 0 ? "pt-3" : ""}`}
+            >
+              <div>
+                <h4 className="text-brand-navy font-bold text-xs sm:text-sm leading-tight">
+                  {item.title}
+                </h4>
+                <p className="text-brand-slate text-[11px] sm:text-xs mt-0.5 font-medium">
+                  {item.subtitle}
+                </p>
+              </div>
 
-          {/* Uptime Guard Info */}
-          <div className="bg-white/5 border border-white/5 p-3 rounded-lg flex items-center space-x-2.5">
-            <div className="w-7 h-7 bg-brand-copper rounded-full flex items-center justify-center text-white">
-              <Shield className="w-3.5 h-3.5" />
+              <div className="shrink-0">
+                {item.status === "success" ? (
+                  <span className="bg-emerald-500/10 text-emerald-600 border border-emerald-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
+                    <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
+                    <span>{item.badge}</span>
+                  </span>
+                ) : (
+                  <span className="bg-amber-500/10 text-amber-600 border border-amber-500/30 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold inline-flex items-center gap-1.5 shadow-xs">
+                    <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5] animate-spin" />
+                    <span>{item.badge}</span>
+                  </span>
+                )}
+              </div>
             </div>
-            <div>
-              <span className="text-[9px] text-white/80 font-bold block">Uptime Guard</span>
-              <span className="text-[8px] text-white/40 block ">MITIGATED: 0 THREATS</span>
-            </div>
-          </div>
-
+          ))}
         </div>
-
       </div>
     </div>
   );
