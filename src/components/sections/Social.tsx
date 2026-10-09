@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Star } from "lucide-react";
-import { TextReveal, FadeInUp } from "../ui/AnimatedText";
 
 export default function Social() {
   const testimonials = [
@@ -62,24 +61,18 @@ export default function Social() {
       className="relative bg-brand-offwhite border-b border-brand-navy/10 overflow-hidden scroll-mt-20"
     >
       {/* Section Header framed with border-x edge lines */}
-      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-4 xs:px-5 sm:px-10 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-14">
         <div className="max-w-2xl text-left space-y-3">
-          <FadeInUp delay={0.05}>
-            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-              - CLIENT FEEDBACK
-            </span>
-          </FadeInUp>
-          <TextReveal
-            text="What local crew owners say."
-            as="h2"
-            className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none"
-          />
-          <FadeInUp delay={0.15}>
-            <p className="text-brand-slate text-xs uppercase tracking-wider flex items-center gap-1.5 font-bold">
-              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
-              <span>Compounding customer satisfaction</span>
-            </p>
-          </FadeInUp>
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
+            - CLIENT FEEDBACK
+          </span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+            What local crew owners say.
+          </h2>
+          <p className="text-brand-slate text-xs uppercase tracking-wider flex items-center gap-1.5 font-bold">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
+            <span>Compounding customer satisfaction</span>
+          </p>
         </div>
       </div>
 
@@ -93,7 +86,7 @@ export default function Social() {
           {marqueeList.map((test, i) => (
             <div
               key={i}
-              className="w-[270px] xs:w-[290px] sm:w-[320px] lg:w-[360px] bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-brand-navy/10 shadow-sm flex flex-col justify-between gap-5 flex-shrink-0 select-none"
+              className="w-[280px] sm:w-[320px] lg:w-[360px] bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-brand-navy/10 shadow-sm flex flex-col justify-between gap-5 flex-shrink-0 select-none"
             >
               <div className="space-y-3 sm:space-y-4 text-left">
                 {/* Stars */}
@@ -115,8 +108,6 @@ export default function Social() {
                     <img
                       src={test.image}
                       alt={test.name}
-                      loading="lazy"
-                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </div>

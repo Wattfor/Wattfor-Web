@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { TextReveal, FadeInUp } from "../ui/AnimatedText";
 
 export default function BlueprintGallery() {
   const blueprints = [
@@ -100,24 +99,18 @@ export default function BlueprintGallery() {
 
   return (
     <section id="blueprints" className="relative bg-brand-offwhite border-b border-brand-navy/10 scroll-mt-24">
-      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-4 xs:px-5 sm:px-10 lg:px-16 py-16 sm:py-20 space-y-12 sm:space-y-16">
-        {/* Header with Text Reveal Animation */}
-        <div className="max-w-xl text-left space-y-3">
-          <FadeInUp delay={0.05}>
-            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-              - ARCHITECTURAL PORTFOLIO
-            </span>
-          </FadeInUp>
-          <TextReveal
-            text="Structural Blueprint Gallery."
-            as="h2"
-            className="text-3xl xs:text-4xl sm:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-none"
-          />
-          <FadeInUp delay={0.15}>
-            <p className="text-brand-slate text-sm font-medium">
-              Clean, optimized local schema structures and wireframe nodes that we implement for your business website.
-            </p>
-          </FadeInUp>
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 space-y-12 sm:space-y-16">
+        {/* Header */}
+        <div className="max-w-xl text-left space-y-4">
+          <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
+            - ARCHITECTURAL PORTFOLIO
+          </span>
+          <h2 className="text-4xl sm:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+            Structural Blueprint Gallery.
+          </h2>
+          <p className="text-brand-slate text-sm font-medium">
+            Clean, optimized local schema structures and wireframe nodes that we implement for your business website.
+          </p>
         </div>
 
         {/* Masonry-like Grid */}
@@ -125,11 +118,11 @@ export default function BlueprintGallery() {
           {blueprints.map((bp, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="bg-white p-5 xs:p-6 rounded-xl border border-brand-navy/10 shadow-sm space-y-4 group hover:border-brand-copper/30 transition-all duration-300 flex flex-col justify-between"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="bg-white p-6 rounded-xl border border-brand-navy/10 shadow-sm space-y-4 group hover:border-brand-copper/30 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="bg-brand-offwhite/50 border border-brand-navy/10 rounded-lg p-4 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#152238_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -139,7 +132,7 @@ export default function BlueprintGallery() {
                 <span className="text-[8px] text-brand-copper uppercase tracking-widest font-bold">
                   {bp.tag}
                 </span>
-                <h4 className="text-lg sm:text-xl font-bold uppercase text-brand-navy tracking-wider">
+                <h4 className="text-xl font-bold uppercase text-brand-navy tracking-wider">
                   {bp.title}
                 </h4>
               </div>

@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
-import { TextReveal, FadeInUp } from "../ui/AnimatedText";
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -40,25 +39,19 @@ export default function Faq() {
       id="faq"
       className="relative bg-brand-offwhite border-b border-brand-navy/10 scroll-mt-20"
     >
-      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-4 xs:px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto border-x border-brand-navy/10 px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column — Section Header matching reference photo */}
           <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
-            <FadeInUp delay={0.05}>
-              <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-                - RESOLVING AMBIGUITY
-              </span>
-            </FadeInUp>
-            <TextReveal
-              text="Frequently Asked Questions"
-              as="h2"
-              className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none"
-            />
-            <FadeInUp delay={0.15}>
-              <p className="text-brand-slate text-sm sm:text-base font-medium leading-relaxed max-w-md">
-                Everything you need to know about domain ownership, trade-specific designs, maintenance plans, and flat-rate contracts.
-              </p>
-            </FadeInUp>
+            <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
+              - RESOLVING AMBIGUITY
+            </span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-brand-slate text-sm sm:text-base font-medium leading-relaxed max-w-md">
+              Everything you need to know about domain ownership, trade-specific designs, maintenance plans, and flat-rate contracts.
+            </p>
           </div>
 
           {/* Right Column — Horizontal divider rows matching reference photo */}
@@ -66,14 +59,7 @@ export default function Faq() {
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.4, delay: idx * 0.06 }}
-                  className="transition-colors"
-                >
+                <div key={idx} className="transition-colors">
                   <button
                     onClick={() => handleToggle(idx)}
                     className="w-full flex justify-between items-center py-5 sm:py-6 text-left cursor-pointer select-none gap-4 group"
@@ -108,7 +94,7 @@ export default function Faq() {
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </motion.div>
+                </div>
               );
             })}
           </div>
