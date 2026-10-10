@@ -121,7 +121,7 @@ export default function Services({ onCtaClick }: ServicesProps) {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="w-full max-w-2xl border border-brand-navy/10 shadow-xl rounded-2xl overflow-hidden"
+                    className="w-full max-w-2xl border-0 shadow-2xl rounded-2xl overflow-hidden"
                   >
                     {panel.mockup}
                   </motion.div>

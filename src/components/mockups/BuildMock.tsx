@@ -35,7 +35,7 @@ export default function BuildMock() {
   ];
 
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden p-3 xs:p-4 sm:p-7 flex items-center justify-center shadow-2xl border border-white/20 select-none bg-brand-navy">
+    <div className="relative w-full rounded-2xl overflow-hidden p-3 xs:p-4 sm:p-7 flex items-center justify-center select-none bg-brand-navy shadow-2xl">
       {/* Silk animated WebGL background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
         <Silk
@@ -48,45 +48,52 @@ export default function BuildMock() {
       </div>
 
       {/* Atmospheric gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/50 via-transparent to-brand-navy/30 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-tr from-brand-navy/50 via-transparent to-brand-navy/30 pointer-events-none z-[1]" />
 
-      {/* Foreground Floating Glassmorphic Card */}
-      <div className="relative z-10 w-full max-w-md bg-white/60 sm:bg-white/70 backdrop-blur-2xl rounded-2xl p-4 sm:p-6 shadow-2xl border border-white/80 ring-1 ring-white/50">
-        {/* Inner Glassmorphic Illustration Box */}
-        <div className="w-full bg-white/40 backdrop-blur-md rounded-xl p-3 sm:p-4 mb-4 flex items-center justify-center border border-white/60 shadow-inner">
+      {/* Highly Glassmorphic & Skeuomorphic Floating Card - No White Border */}
+      <div className="relative z-10 w-full max-w-md bg-gradient-to-b from-white/[0.18] via-white/[0.08] to-black/[0.25] backdrop-blur-3xl rounded-2xl p-4 sm:p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),inset_0_-1px_1px_rgba(0,0,0,0.5),0_25px_50px_-12px_rgba(0,0,0,0.7)] overflow-hidden">
+        {/* Skeuomorphic Glass Specular Reflection Highlight */}
+        <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/[0.15] via-transparent to-transparent pointer-events-none rounded-t-2xl" />
+
+        {/* Debossed / Recessed Skeuomorphic Illustration Well */}
+        <div className="w-full bg-black/35 backdrop-blur-md rounded-xl p-3 sm:p-4 mb-4 flex items-center justify-center shadow-[inset_0_2px_5px_rgba(0,0,0,0.6),0_1px_0_rgba(255,255,255,0.1)] relative z-10">
           <img
             src="/undraw_website-visitors_qy9c.svg"
             alt="Website Visitors"
             loading="lazy"
             decoding="async"
-            className="h-24 xs:h-28 sm:h-36 w-auto object-contain transition-transform duration-300 hover:scale-105"
+            className="h-24 xs:h-28 sm:h-36 w-auto object-contain transition-transform duration-300 hover:scale-105 drop-shadow-md"
           />
         </div>
 
-        {/* Feature Status Rows with clean divider lines */}
-        <div className="space-y-3 divide-y divide-brand-navy/10">
+        {/* Feature Status Rows with Skeuomorphic Engraved Grooves */}
+        <div className="space-y-3 relative z-10">
           {items.map((item, idx) => (
             <div
               key={idx}
-              className={`flex items-center justify-between gap-2 xs:gap-3 ${idx > 0 ? "pt-3" : ""}`}
+              className={`flex items-center justify-between gap-2 xs:gap-3 ${
+                idx > 0
+                  ? "pt-3 border-t border-black/40 shadow-[0_1px_0_rgba(255,255,255,0.08)]"
+                  : ""
+              }`}
             >
               <div className="min-w-0 pr-1">
-                <h4 className="text-brand-navy font-extrabold text-xs sm:text-sm leading-tight truncate xs:whitespace-normal">
+                <h4 className="text-white font-extrabold text-xs sm:text-sm leading-tight truncate xs:whitespace-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
                   {item.title}
                 </h4>
-                <p className="text-brand-slate text-[10px] sm:text-xs mt-0.5 font-semibold truncate xs:whitespace-normal">
+                <p className="text-white/75 text-[10px] sm:text-xs mt-0.5 font-medium truncate xs:whitespace-normal drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                   {item.subtitle}
                 </p>
               </div>
 
               <div className="shrink-0">
                 {item.status === "success" ? (
-                  <span className="bg-emerald-500/20 text-emerald-800 border border-emerald-500/40 px-2 py-0.5 sm:px-3 sm:py-1 rounded-md text-[10px] sm:text-xs font-bold inline-flex items-center gap-1 shadow-xs backdrop-blur-md">
+                  <span className="bg-gradient-to-b from-emerald-500/35 to-emerald-600/50 text-emerald-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-1px_1px_rgba(0,0,0,0.4),0_2px_5px_rgba(0,0,0,0.4)] px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold inline-flex items-center gap-1.5 backdrop-blur-md">
                     <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
                     <span>{item.badge}</span>
                   </span>
                 ) : (
-                  <span className="bg-amber-500/20 text-amber-800 border border-amber-500/40 px-2 py-0.5 sm:px-3 sm:py-1 rounded-md text-[10px] sm:text-xs font-bold inline-flex items-center gap-1 shadow-xs backdrop-blur-md">
+                  <span className="bg-gradient-to-b from-amber-500/35 to-amber-600/50 text-amber-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-1px_1px_rgba(0,0,0,0.4),0_2px_5px_rgba(0,0,0,0.4)] px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold inline-flex items-center gap-1.5 backdrop-blur-md">
                     <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5] animate-spin" />
                     <span>{item.badge}</span>
                   </span>
