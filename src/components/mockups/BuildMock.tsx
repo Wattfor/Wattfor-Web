@@ -7,6 +7,12 @@ import { Check, Clock } from "lucide-react";
 const Silk = dynamic(() => import("@/components/Silk"), { ssr: false });
 
 export default function BuildMock() {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const items = [
     {
       title: "High-Speed Mobile Core",
@@ -38,13 +44,15 @@ export default function BuildMock() {
     <div className="relative w-full rounded-2xl overflow-hidden p-3 xs:p-4 sm:p-7 flex items-center justify-center select-none bg-brand-navy shadow-2xl">
       {/* Silk animated WebGL background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-        <Silk
-          speed={4}
-          scale={1.2}
-          color="#0e3151"
-          noiseIntensity={1.5}
-          rotation={0}
-        />
+        {mounted && (
+          <Silk
+            speed={4}
+            scale={1.2}
+            color="#0e3151"
+            noiseIntensity={1.5}
+            rotation={0}
+          />
+        )}
       </div>
 
       {/* Atmospheric gradient overlay */}

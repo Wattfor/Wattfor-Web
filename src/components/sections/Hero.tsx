@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -13,6 +13,12 @@ interface HeroProps {
 }
 
 export default function Hero({ onCtaClick }: HeroProps) {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -107,13 +113,15 @@ export default function Hero({ onCtaClick }: HeroProps) {
     <section className="relative min-h-[100dvh] flex flex-col justify-between overflow-hidden bg-brand-navy text-white">
       {/* Silk animated WebGL background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-        <Silk
-          speed={5}
-          scale={1}
-          color="#0e3151"
-          noiseIntensity={1.5}
-          rotation={0}
-        />
+        {mounted && (
+          <Silk
+            speed={5}
+            scale={1}
+            color="#0e3151"
+            noiseIntensity={1.5}
+            rotation={0}
+          />
+        )}
       </div>
 
       {/* Subtle overlays so centered text is crisp while Silk motion remains visible */}
