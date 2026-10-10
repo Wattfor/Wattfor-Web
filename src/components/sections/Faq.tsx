@@ -46,7 +46,7 @@ export default function Faq() {
             <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
               - QUICK ANSWERS
             </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-[42px] font-extrabold uppercase text-brand-navy tracking-tight leading-tight">
               Frequently Asked Questions
             </h2>
             <p className="text-brand-slate text-sm sm:text-base font-medium leading-relaxed max-w-md">

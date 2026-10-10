@@ -58,7 +58,7 @@ export default function Portfolio() {
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             - RECENT WORK
           </span>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white tracking-tight leading-none">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-[42px] font-extrabold uppercase text-white tracking-tight leading-tight">
             Real Results for Trade Pros.
           </h2>
           <p className="text-white/70 text-sm sm:text-base font-medium">

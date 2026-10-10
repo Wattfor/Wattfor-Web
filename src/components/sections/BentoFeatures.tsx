@@ -93,7 +93,7 @@ export default function BentoFeatures() {
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             - WHAT YOU RECEIVE
           </span>
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase text-brand-navy tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-[42px] font-extrabold uppercase text-brand-navy tracking-tight leading-tight">
             Everything your website needs to win jobs.
           </h2>
           <p className="text-brand-slate text-sm sm:text-base font-medium leading-relaxed">

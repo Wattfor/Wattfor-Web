@@ -108,7 +108,7 @@ export default function Pricing({ onCtaClick }: PricingProps) {
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
             - CLEAR PRICING
           </span>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-[1]">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-[42px] font-extrabold uppercase text-brand-navy tracking-tight leading-tight">
             Simple pricing. <br className="hidden sm:block" />
             No hidden contracts.
           </h2>
