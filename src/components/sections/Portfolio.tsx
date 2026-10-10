@@ -10,8 +10,8 @@ export default function Portfolio() {
       title: "Apex Electrical Services",
       location: "Denver, CO",
       trade: "Electrician",
-      metric: "+140% Call Volume",
-      metricDesc: "Increased monthly inbound calls via GBP pack rankings within 60 days.",
+      metric: "+140% More Calls",
+      metricDesc: "Ranked #1 on local Google Maps within 60 days, adding 15+ new service calls every month.",
       image:
         "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
     },
@@ -19,8 +19,8 @@ export default function Portfolio() {
       title: "Mitchell Roofing Crew",
       location: "Arvada, CO",
       trade: "Roofer",
-      metric: "#1 Local Pack Slot",
-      metricDesc: "Ranked #1 for local roofing searches in immediate Denver metro suburbs.",
+      metric: "#1 Spot on Google",
+      metricDesc: "Ranked #1 for local emergency roof repair searches across the entire northwest Denver area.",
       image:
         "https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&w=800&q=80",
     },
@@ -28,8 +28,8 @@ export default function Portfolio() {
       title: "Vance Brothers Plumbing",
       location: "Thornton, CO",
       trade: "Plumber",
-      metric: "98 PageSpeed Score",
-      metricDesc: "Optimized landing speeds leading to direct conversion rate increases.",
+      metric: "0.8s Loading Speed",
+      metricDesc: "Fast-loading mobile site turned casual website visitors into direct incoming phone calls.",
       image:
         "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80",
     },
@@ -37,8 +37,8 @@ export default function Portfolio() {
       title: "Summit HVAC Solutions",
       location: "Boulder, CO",
       trade: "HVAC Pro",
-      metric: "Zero Ads Retained",
-      metricDesc: "Swapped expensive Google Ads spend for organic local map leads.",
+      metric: "$0 Spent on Ads",
+      metricDesc: "Replaced expensive monthly Google Ads with free organic leads from Google Maps.",
       image:
         "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80",
     },
@@ -56,12 +56,12 @@ export default function Portfolio() {
         {/* Section Header */}
         <div className="max-w-2xl text-left space-y-3">
           <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-            - ACTIVE PROOFS
+            - RECENT WORK
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white tracking-tight leading-none">
-            Our Trade Portfolio.
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-white tracking-tight leading-none">
+            Real Results for Trade Pros.
           </h2>
-          <p className="text-brand-slate text-sm font-medium">
+          <p className="text-white/70 text-sm sm:text-base font-medium">
             Take a look at local contractor websites designed, coded, and optimized by Wattfor.
           </p>
         </div>
@@ -71,18 +71,19 @@ export default function Portfolio() {
           {projects.map((proj, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-black/30 border border-white/10 p-5 sm:p-6 lg:p-8 rounded-xl flex flex-col justify-between gap-5 hover:border-brand-copper/40 transition-all duration-300 group"
+              whileHover={{ y: -8, scale: 1.015, transition: { duration: 0.25 } }}
+              className="bg-black/30 border border-white/10 p-5 sm:p-6 lg:p-8 rounded-xl flex flex-col justify-between gap-5 hover:border-brand-copper/50 hover:shadow-xl transition-all duration-300 group cursor-default"
             >
               {/* Image */}
               <div className="bg-brand-navy border border-white/10 rounded-lg overflow-hidden aspect-[16/10] relative shadow-md">
                 <img
                   src={proj.image}
                   alt={proj.title}
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
                 />
               </div>
 
@@ -99,11 +100,11 @@ export default function Portfolio() {
 
                 {/* Metric Callout */}
                 <div className="bg-white/5 border border-white/10 p-3 sm:p-4 rounded-lg space-y-1">
-                  <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
+                  <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
                     <CheckCircle className="w-3.5 h-3.5 flex-shrink-0" />
-                    <span>METRIC ACHIEVED: {proj.metric}</span>
+                    <span>RESULT: {proj.metric}</span>
                   </span>
-                  <p className="text-white/60 text-xs leading-relaxed font-medium">
+                  <p className="text-white/70 text-xs leading-relaxed font-medium">
                     {proj.metricDesc}
                   </p>
                 </div>

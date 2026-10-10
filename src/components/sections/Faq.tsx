@@ -44,7 +44,7 @@ export default function Faq() {
           {/* Left Column — Section Header matching reference photo */}
           <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
             <span className="text-xs uppercase tracking-widest text-brand-copper font-bold block">
-              - RESOLVING AMBIGUITY
+              - QUICK ANSWERS
             </span>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-brand-navy tracking-tight leading-none">
               Frequently Asked Questions
