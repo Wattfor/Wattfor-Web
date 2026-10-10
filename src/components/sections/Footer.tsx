@@ -1,8 +1,11 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 import Button from "../ui/Button";
+
+const Silk = dynamic(() => import("@/components/Silk"), { ssr: false });
 
 interface FooterProps {
   onCtaClick: () => void;
@@ -33,10 +36,25 @@ export default function Footer({ onCtaClick }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-black text-white relative z-10 overflow-hidden border-t border-white/10">
+    <footer className="bg-brand-navy text-white relative z-10 overflow-hidden border-t border-white/10">
+      {/* Silk animated WebGL background matching Hero section */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <Silk
+          speed={5}
+          scale={1}
+          color="#0e3151"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
+      </div>
+
+      {/* Atmospheric overlays so content is crisp and legible */}
+      <div className="absolute inset-0 bg-radial from-transparent via-brand-navy/30 to-brand-navy/85 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/70 via-transparent to-brand-navy/90 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none z-[1] opacity-50" />
 
       {/* 1. Top CTA Band */}
-      <div className="border-b border-white/10">
+      <div className="border-b border-white/10 relative z-10">
         <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 py-10 sm:py-12 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5 sm:gap-6">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white max-w-xl text-left leading-tight">
             Supercharge your trade crew.
@@ -52,13 +70,13 @@ export default function Footer({ onCtaClick }: FooterProps) {
         </div>
       </div>
 
-      {/* 2. Directory Grid & Background Wordmark */}
-      <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 pt-12 sm:pt-16 pb-16 sm:pb-20 relative">
+      {/* 2. Directory Grid & Giant Background Wordmark */}
+      <div className="border-b border-white/10 relative z-10">
+        <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 pt-12 sm:pt-16 pb-16 sm:pb-20 relative overflow-hidden">
 
-          {/* Giant Background Wordmark */}
-          <div className="absolute right-0 bottom-4 pointer-events-none select-none opacity-[0.07] overflow-hidden">
-            <span className="text-[6rem] sm:text-[10rem] md:text-[14rem] font-black text-brand-sky tracking-tighter leading-none whitespace-nowrap">
+          {/* Giant Background Wordmark: WATTFOR in big letters */}
+          <div className="absolute right-0 -bottom-4 sm:-bottom-8 pointer-events-none select-none opacity-[0.12] overflow-hidden z-[2]">
+            <span className="text-[7rem] sm:text-[11rem] md:text-[15rem] lg:text-[18rem] font-black text-white tracking-tighter leading-none whitespace-nowrap block">
               Wattfor
             </span>
           </div>
@@ -82,7 +100,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
                   wattfor
                 </span>
               </a>
-              <p className="text-brand-slate text-sm max-w-xs font-medium leading-relaxed">
+              <p className="text-white/70 text-sm max-w-xs font-medium leading-relaxed">
                 We build professional websites and manage local search visibility for trade
                 contractors. Power your search. Power your bookings.
               </p>
@@ -96,7 +114,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
                 <h4 className="text-[10px] uppercase tracking-widest text-brand-sky font-bold">
                   Product
                 </h4>
-                <ul className="space-y-2 text-sm text-brand-slate font-medium">
+                <ul className="space-y-2 text-sm text-white/70 font-medium">
                   {productLinks.map((link, idx) => (
                     <li key={idx}>
                       <a href={link.href} className="hover:text-white transition-colors">
@@ -112,7 +130,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
                 <h4 className="text-[10px] uppercase tracking-widest text-brand-sky font-bold">
                   Company
                 </h4>
-                <ul className="space-y-2 text-sm text-brand-slate font-medium">
+                <ul className="space-y-2 text-sm text-white/70 font-medium">
                   {companyLinks.map((link, idx) => (
                     <li key={idx}>
                       <a href={link.href} className="hover:text-white transition-colors">
@@ -128,7 +146,7 @@ export default function Footer({ onCtaClick }: FooterProps) {
                 <h4 className="text-[10px] uppercase tracking-widest text-brand-sky font-bold">
                   Connect
                 </h4>
-                <ul className="space-y-2 text-sm text-brand-slate font-medium">
+                <ul className="space-y-2 text-sm text-white/70 font-medium">
                   {connectLinks.map((link, idx) => (
                     <li key={idx}>
                       <a
@@ -150,13 +168,13 @@ export default function Footer({ onCtaClick }: FooterProps) {
       </div>
 
       {/* 3. Copyright Bar */}
-      <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 py-6 sm:py-8 flex flex-col sm:flex-row justify-between items-center text-[10px] text-brand-slate gap-3 sm:gap-4">
+      <div className="max-w-7xl mx-auto border-x border-white/10 px-5 sm:px-10 lg:px-16 py-6 sm:py-8 flex flex-col sm:flex-row justify-between items-center text-[10px] text-white/50 gap-3 sm:gap-4 relative z-10">
         <div className="flex items-center gap-1">
-          <span className="font-semibold text-white/60">Wattfor</span>
+          <span className="font-semibold text-white/80">Wattfor</span>
           <span>© Copyright {currentYear}</span>
         </div>
         <div>
-          <span className="text-white/20 select-none">Crafted By Wattfor</span>
+          <span className="text-white/30 select-none">Crafted By Wattfor</span>
         </div>
       </div>
 

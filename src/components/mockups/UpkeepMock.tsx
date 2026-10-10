@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { Check, Clock } from "lucide-react";
+
+const Silk = dynamic(() => import("@/components/Silk"), { ssr: false });
 
 export default function UpkeepMock() {
   const items = [
@@ -33,26 +35,20 @@ export default function UpkeepMock() {
   ];
 
   return (
-    <div className="relative w-full rounded-xl overflow-hidden p-4 sm:p-7 flex items-center justify-center shadow-md border border-brand-navy/10 select-none">
-      {/* Animated photo in the background */}
-      <motion.img
-        src="/images/service-bg-3.jpg"
-        alt="Animated Background"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none scale-105"
-        animate={{
-          scale: [1.02, 1.1, 1.02],
-          x: [0, 8, -10, 0],
-          y: [0, -6, 6, 0],
-        }}
-        transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
+    <div className="relative w-full rounded-xl overflow-hidden p-4 sm:p-7 flex items-center justify-center shadow-md border border-brand-navy/10 select-none bg-brand-navy">
+      {/* Silk animated WebGL background */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+        <Silk
+          speed={4}
+          scale={1.2}
+          color="#0e3151"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
+      </div>
 
       {/* Atmospheric gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/20 via-transparent to-white/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/60 via-brand-navy/20 to-brand-navy/40 pointer-events-none z-[1]" />
 
       {/* Foreground Floating Card with reduced border radius */}
       <div className="relative z-10 w-full max-w-md bg-white/95 backdrop-blur-md rounded-xl p-5 sm:p-6 shadow-xl border border-brand-navy/10">
