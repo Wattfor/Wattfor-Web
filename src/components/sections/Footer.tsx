@@ -24,8 +24,8 @@ export default function Footer({ onCtaClick }: FooterProps) {
   const companyLinks = [
     { name: "About Us", href: "#reviews" },
     { name: "FAQ", href: "#faq" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
   ];
 
   const connectLinks = [
